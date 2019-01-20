@@ -1,0 +1,45 @@
+<form class="mb-2 mt-2" [formGroup]="form" (ngSubmit)='addContact(form.value)'>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Prénom</label>
+        <input formControlName="first" type="text" class="form-control">
+        <div *ngIf="form.controls.first.hasError('required')">
+          Champ requis
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Nom</label>
+        <input formControlName="last" type="text" class="form-control">
+        <div *ngIf="form.controls.last.hasError('required')">
+          Champ requis
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Email</label>
+        <input formControlName="email" type="text" class="form-control">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Mobile</label>
+        <input formControlName="cell" type="text" class="form-control">
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group col-md-4">
+          <label>Adresse</label>
+          <input formControlName="address" type="text" class="form-control">
+      </div>
+      <div class="form-group col-md-4">
+            <label>CP</label>
+            <input formControlName="cp" type="text" class="form-control">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputCity">Ville</label>
+        <input formControlName="city" type="text" class="form-control">
+      </div>
+    </div>
+    <button type="submit" [title]="form.invalid?'Saisissez les champs requis':'Envoyer'" [disabled]="form.invalid" class="btn btn-primary">{{textAddOrUpdate}}</button>
+</form>

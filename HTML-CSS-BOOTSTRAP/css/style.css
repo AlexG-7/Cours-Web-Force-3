@@ -1,0 +1,675 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+/***********************INDEX********************/
+header {
+  background: #7fc6bc;
+}
+
+nav {
+  height: 75px;
+  background: green;
+}
+
+main {
+  width: 1000px;
+  height: 2500px;
+  background: #ecf0f1;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+footer {
+  height: 50px;
+  background: blue;
+}
+
+h1 {
+  font-size: 28px;
+  color: #2980b9;
+  text-align: center;
+  font-family: "Pattaya", sans-serif;
+  padding: 50px;
+}
+
+.fa-code {
+  font-size: 20px;
+}
+
+/*********************TEXTE****************/
+.police h3 {
+  font-family: "Spicy Rice", cursive;
+}
+
+.police p {
+  font-family: "Pacifico", cursive;
+}
+
+.fas {
+  font-size: 12px;
+  color: violet;
+}
+
+/***********************SELECTEURS*******************/
+.select {
+  font-size: 22px;
+  /*color:blue;*/
+}
+
+.select p {
+  color: green;
+}
+
+.select p:first-of-type {
+  color: blue;
+}
+
+.select p:last-of-type {
+  color: green;
+}
+
+.select p:nth-child(even) {
+  color: yellow;
+}
+
+.select p:nth-child(odd) {
+  color: purple;
+}
+
+.select p:nth-child(5),
+.select p:nth-child(3) {
+  color: pink;
+}
+
+.select div:not(.zoneB) {
+  font-weight: bold;
+}
+
+.select .zoneA {
+  color: #f56f56;
+}
+
+.select .zoneB {
+  color: #996633;
+}
+
+.select .couleurBleu {
+  color: #336699;
+}
+
+.select #zoneC {
+  color: #98f32f;
+}
+
+.select #zoneD span {
+  color: #32ff32;
+}
+
+/***********************IMAGES**********************/
+.imageFond {
+  background: url(../img/plage.jpg) no-repeat;
+  background-size: cover;
+  padding-bottom: 500px;
+}
+
+.imageFond p {
+  width: 75%;
+  margin: 100px auto 200px auto;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  font-size: 120%;
+  border-radius: 10px;
+}
+
+img[src="img/michel_dumas.png"] {
+  display: block;
+  width: 250px;
+  margin: auto;
+}
+
+/* section{ */
+/* text-align:center; */
+/* } */
+/**********************IMAGE HTML/CSS******************/
+.rotationImg {
+  text-align: center;
+}
+
+.image {
+  margin: 20px;
+  border: 5px solid #eee;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+  transition: 1s;
+}
+
+.image:hover {
+  transform: rotate(-7deg);
+}
+
+.rotation360:hover {
+  transform: rotate(-360deg);
+}
+
+/************************POSITIONS******************/
+#centre {
+  width: 500px;
+  height: 200px;
+  background: #33cccc;
+  margin: 0 auto;
+}
+
+.absolute {
+  background: orange;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.relative {
+  background: red;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 50px;
+  bottom: 100px;
+}
+
+.fixed {
+  font-size: 300%;
+  color: #3545d5;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+}
+
+/***************************POURCENTAGES**************/
+.trente {
+  width: 30%;
+  padding: 20px;
+  font-size: 22px;
+  background: #f1384e;
+  color: #efe94b;
+  font-weight: bold;
+}
+
+.cinquante {
+  width: 50%;
+  padding: 20px;
+  font-size: 22px;
+  background: #383746;
+  color: #f1384e;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cent {
+  width: 100%;
+  padding: 20px;
+  font-size: 22px;
+  background: #efe94b;
+  color: #383746;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/**********************ATTRIBUT FLOAT****************/
+.float {
+  float: left;
+  width: 170px;
+  height: 170px;
+  text-align: center;
+  border: 3px solid #cf4647;
+  margin: 20px;
+  background: #f5d061;
+}
+
+.dernier {
+  width: 170px;
+  height: 170px;
+  text-align: center;
+  border: 3px solid #cf4647;
+  margin: 20px;
+  background: #f5d061;
+}
+
+.clear {
+  clear: both;
+}
+
+/****************EXERCICE SUR LE FLOAT*****************/
+.rectangle {
+  height: 50px;
+  background: #6a6b79;
+}
+
+.carre {
+  float: left;
+  width: 25%;
+  height: 250px;
+}
+
+.couleur1 {
+  background: blue;
+}
+
+.couleur2 {
+  background: red;
+}
+
+.couleur3 {
+  background: yellow;
+}
+
+.couleur4 {
+  background: black;
+}
+
+/********************FLEXBOX***************************/
+.flex div {
+  width: 50%;
+  height: 150px;
+  background: #e85b48;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  /* display:flex; */
+  /* align-items:center; */
+  /* justify-content:center; */
+}
+
+.flex {
+  display: flex;
+  /*justify-content:space-around;/*Elements avec espace égal*/
+  /*justify-content:space-between; */
+  flex-wrap: wrap;
+}
+
+/***************************TABLEAUX****************************/
+table {
+  border: 3px solid #6495ed;
+  border-collapse: collapse;
+  /*permet d'applatir les lignes*/
+  margin: 50px auto;
+  width: 90%;
+}
+
+tfoot {
+  background: #383746;
+  border: 1px solid #6495ed;
+}
+
+tbody {
+  border: 1px solid #6495ed;
+}
+
+th {
+  border: 1px solid #6495ed;
+  padding: 5px;
+  background: #eff6ff;
+  width: 25%;
+}
+
+td {
+  font-family: Pacifico;
+  font-size: 80%;
+  border: 1px solid #6495ed;
+  padding: 5px;
+  text-align: center;
+}
+
+.jet {
+  font-size: 30px;
+  color: black;
+}
+
+/****************************LISTES*****************************/
+.fruit {
+  padding-left: 30px;
+  display: flex;
+}
+
+.fa-cookie-bite {
+  font-size: 50px;
+  color: #a47c40;
+}
+
+.fruit li {
+  margin: 0 8px;
+  font-family: pacifico;
+  font-size: 30px;
+  color: #f3345a;
+}
+
+/************************LISTE IMBRIQUEE************************/
+.imbrique {
+  padding-left: 15px;
+}
+
+.imbrique li ul {
+  padding-left: 15px;
+}
+
+.fa-globe {
+  font-size: 30px;
+  color: #0ebacd;
+}
+
+.fa-flag {
+  font-size: 15px;
+  color: #2cd258;
+}
+
+/**********************LIENS & MENUS***************************/
+html {
+  scroll-behavior: smooth;
+}
+
+.ancre {
+  text-align: center;
+}
+
+.ancre a {
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px 10px;
+  background: #15c0a9;
+  box-shadow: 9px 3px 26px 3px rgba(242, 142, 242, 1);
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.ancre a:hover {
+  box-shadow: none;
+}
+
+.retourHaut {
+  font-size: 100px;
+  color: #3545d5;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+}
+
+#menus nav {
+  padding: 25px 0;
+  background: darkblue;
+}
+
+#menus ul {
+  text-align: center;
+}
+
+#menus ul li {
+  display: inline-block;
+}
+
+#menus ul li a {
+  padding: 10px;
+  margin: 5px;
+  color: #666;
+  text-decoration: none;
+  background: #ddd;
+  transition: 0.6s ease-in;
+}
+
+#menus ul li a:hover {
+  color: #fff;
+  background: #006699;
+}
+
+/********************AGENCEMENT MENU SITE****************/
+.menus nav {
+  padding: 25px 0;
+  background: darkblue;
+}
+
+.menus ul {
+  text-align: center;
+}
+
+.menus ul li {
+  display: inline-block;
+}
+
+.menus ul li a {
+  padding: 10px;
+  margin: 10px;
+  color: #666;
+  text-decoration: none;
+  background: #ddd;
+  transition: 0.6s ease-in;
+}
+
+.menus ul li a:hover {
+  color: #fff;
+  background: #006699;
+}
+
+/********************MULTIMEDIA***************************/
+.videoFond video {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.videoTexte {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.videoFond p {
+  position: absolute;
+  z-index: 2;
+  width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.6);
+  left: 250px;
+  top: 100px;
+  padding: 20px;
+  font-size: 120%;
+  border-radius: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+}
+
+/***********************FORMULAIRE***************************/
+form {
+  width: 60;
+  background: #2c3e50;
+  margin: 0 auto;
+  padding: 20px;
+  color: #ecf0f1;
+  border-radius: 15px;
+}
+
+label {
+  margin: 10px 0;
+  width: 50%;
+  display: inline-block;
+}
+
+textarea {
+  resize: none;
+  width: 200px;
+  height: 50px;
+  vertical-align: top;
+}
+
+/***********************ANIMATION***************************/
+.imgEffets {
+  width: 302px;
+  height: 320px;
+  margin: 70px auto;
+}
+
+.imgEffets li {
+  float: left;
+  width: 141px;
+  height: 150px;
+  margin: 5px;
+}
+
+.imgEffets li:nth-child(3) {
+  clear: both;
+}
+
+.imgEffets img {
+  position: absolute;
+  z-index: 1;
+  height: 150px;
+  box-shadow: 0 0 3px black;
+  transition: all 1.5s cubic-bezier(0, 3, 0.4, 1);
+}
+
+.imgEffets li:hover img {
+  z-index: 2;
+  transform: scale(1.5);
+  box-shadow: 0 0 10px black;
+}
+
+.imgEffets:hover li:not(:hover) img {
+  filter: grayscale(1) blur(10px);
+}

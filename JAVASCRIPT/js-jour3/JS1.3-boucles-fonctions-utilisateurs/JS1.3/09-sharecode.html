@@ -1,0 +1,30 @@
+<script>
+
+// **** Utilisation d'un tableau comme une pile (exemple : une pile d'assiettes).
+
+
+// Déclaration d'une variable.
+var pile;
+
+
+// Une pile est avant tout un tableau.
+pile = new Array();
+
+// Ajoute de nouveaux éléments à la pile (à la fin du tableau).
+pile.push(10);
+pile.push(20);
+pile.push(30);
+
+
+/*
+ * Récupère le dernier élément de la pile (à la fin du tableau).
+ *
+ * Les piles sont de type LIFO - Last In First Out
+ * Exemple : une pile d'assiettes
+ * Le dernier élément ajouté est le premier à être récupéré.
+ *
+ * Dans cet exemple cela va afficher le nombre 30.
+ */
+document.write('<p>' + pile.pop() + '</p>');
+
+</script>

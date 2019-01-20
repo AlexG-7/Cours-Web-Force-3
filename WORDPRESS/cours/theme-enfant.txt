@@ -1,0 +1,31 @@
+wp-content\themes\ 
+Créer un nouveau dossier nommé "newtheme-child". 
+		\wp-content\themes\newtheme-child\ - A l'intérieur de ce nouveau dossier, créer 2 fichiers :
+			- style.css
+			- functions.php
+			
+		\wp-content\themes\newtheme-child\style.css
+			/*
+			 Theme Name:   newtheme Child
+			 Theme URI:    http://example.com/newtheme-child/
+			 Description:  newtheme Child Theme
+			 Author:       John Doe
+			 Author URI:   http://example.com
+			 Template:     twentytwelve
+			 Version:      1.0.0
+			 License:      GNU General Public License v2 or later
+			 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+			 Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+			 Text Domain:  newtheme-child
+			*/
+			h1{ color: green; }
+			// Le code ci-dessus permet de déclarer ce thème comme étant enfant.
+			
+		\wp-content\themes\newtheme-child\functions.php
+			add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+			function theme_enqueue_styles() {
+			wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+			}
+			// Le code ci-dessus permet de récupérer le fichier css du parent.
+		
+		BackOffice > Apparence > Thème > Activer newtheme Child

@@ -1,0 +1,54 @@
+body {
+  background: #566177;
+  font-family: arial;
+}
+#accordion-list, h2 {
+  width:700px;
+  margin: 0 auto;
+  margin:1em;
+}
+h2 {
+  color: #fff;
+}
+
+#accordion-item {
+  padding-bottom: 15px;
+}
+a.question {
+  background: #fafafe;
+  padding: 11px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+  border-bottom: 1px solid #e7e7e7;
+  position:relative;
+  text-decoration: none;
+  color: #2a2a2e;
+  transition: 0.2s;
+}
+a.question i {
+  position:absolute;
+  right:3%;
+  transition: 0.3s;
+}
+a.active  {
+  font-weight:bold;
+  padding-left: 19px;
+  color: #1f86d8;
+}
+a.active i  {
+  transform: rotate(90deg);
+  font-weight:bold;
+  color: #1f86d8;
+}
+a.question:hover {
+  background: #f5f6f7;
+  cursor:pointer;
+}
+p.answer {
+  padding: 15px;
+  display: none;
+  background: #fff;
+  margin-top:0;
+  color: #455;
+}

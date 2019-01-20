@@ -1,0 +1,132 @@
+body {
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #061339;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Merienda", cursive;
+  font-size: 20px;
+  padding: 10px 0 0 10px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  color: #b9cdff;
+  padding: 70px 0;
+  background: url(../images/background.jpg);
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 3px 3px 3px black;
+  font-family: "Merienda", cursive;
+}
+
+/* SLIDESHOW ET FORMULAIRE */
+h3 {
+  text-align: center;
+  color: #2f4073;
+  font-family: "Merienda", cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#slideshow {
+  padding: 50px 0;
+  background-color: #f1f1f1;
+}
+
+#carouselChat:hover {
+  opacity: 0.8;
+}
+
+#formulaire {
+  box-shadow: 0 0 5px rgb(99, 93, 93);
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+h4 {
+  font-size: 16px;
+  margin: 0;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+
+#inlineFormCustomSelect {
+  color: gray;
+  margin: 0 0 10px 5px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: #1d960a;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.success {
+  display: none;
+  color: #1d960a;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.error {
+  color: rgb(209, 47, 47);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* PARTIE TEXE ET LOGO */
+.texteChat {
+  background-color: #dedede;
+  padding: 40px 0 0 0;
+}
+
+h5 {
+  color: #2f4073;
+  font-size: 40px;
+  padding-bottom: 10px;
+  font-family: "Merienda", cursive;
+}
+
+p {
+  font-size: 15px;
+}
+
+.logoChat {
+  background: #7885a5;
+  transition-duration: 500ms;
+  max-width: 100%;
+  margin: auto;
+}
+
+.logoChat:hover {
+  background: #061339;
+}
+
+/* FOOTER */
+footer {
+  padding: 0;
+  margin: 0;
+}
+
+footer p {
+  background: #061339;
+  color: #fff;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}

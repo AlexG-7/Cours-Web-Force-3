@@ -1,0 +1,279 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/******************************************************************************/
+* {
+  box-sizing: border-box;
+}
+/**************************************************************************************************************************************************************************/
+.container {
+  background: url("../img/USA-by-night.jpg");
+  padding: 100px;
+}
+header {
+  background: rgba(132, 180, 236, 0.418);
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
+.logoSlogan {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo {
+  padding: 20px;
+}
+.logo img {
+  width: 150px;
+  height: 150px;
+  box-shadow: 10px 10px 5px #e65f5f;
+  border-radius: 0 0 10px 0;
+}
+.slogan h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #e9ebf8;
+}
+.slogan p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: aquamarine;
+}
+nav {
+  width: 100%;
+  display: flex;
+}
+.menu {
+  padding: 20px;
+  width: 100%; 
+  display: flex;
+  align-items: flex-end; 
+  justify-content: flex-end;
+}
+
+.menu ul{
+ display: flex;
+}
+.menu .home {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  padding: 10px;
+}
+.menu .profil {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  padding: 10px;
+}
+.menu .portfolio {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  padding: 10px;
+}
+.menu .projet {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  padding: 10px;
+}
+.menu .about {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  padding: 10px;
+}
+.menu .contact {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  padding: 10px;
+}
+.home:hover,
+.profil:hover,
+.portfolio:hover,
+.projet:hover,
+.about:hover,
+.contact:hover
+{
+  color: #e65f5f;
+}
+main {
+  padding: 20px;
+  background: #e9ebf8;
+}
+.contenu1 {
+  background: blue;
+  padding: 20px;
+}
+.contenu2 {
+  background: rgb(80, 65, 40);
+  padding: 20px;
+}
+.contenu3 {
+  background: rgb(125, 112, 202);
+  padding: 20px;
+}
+.returnButton {
+  font-size: 300%;
+  color: #3545d5;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+.mentionsLegales {
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+}
+html {
+    scroll-behavior: smooth;
+  }
+.icones{
+    display: flex;
+    align-items: flex-end;
+    font-family: "Pacifico", cursive;
+  font-size: 30px;
+}
+.twitter:hover, .facebook:hover, .instagram:hover{
+    color: #45a1ff;
+}
+.twitter{
+    padding: 5px;
+}
+.facebook{
+    padding: 5px;
+}
+.instagram{
+    padding:5px;
+}

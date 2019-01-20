@@ -1,0 +1,27 @@
+.navbar {
+  background: #081c24;
+}
+.navbar-brand {
+  color: #64eb73e6;
+}
+.card {
+  background: transparent;
+  margin: auto;
+}
+.item:hover {
+  background: #234;
+  border-radius: 10px;
+}
+.item:hover h2 {
+  color: #197de2;
+}
+.item:hover p {
+  color: #fff;
+}
+.card-body {
+  min-height: 200px;
+}
+
+.details{
+    display: none;
+}

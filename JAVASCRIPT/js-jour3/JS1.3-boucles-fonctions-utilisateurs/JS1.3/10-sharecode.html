@@ -1,0 +1,37 @@
+<script>
+
+// **** Utilisation d'un tableau comme une file (exemple : file d'attente).
+
+
+// Déclaration d'une variable.
+var file;
+ 
+// Une file est avant tout un tableau.
+file = new Array();
+
+// Ajoute de nouveaux éléments à la file (à la fin du tableau).
+file.push(10);
+file.push(20);
+file.push(30);
+
+
+/*
+ * Récupère le premier élément de la file (à la fin du tableau).
+ *
+ * Les files sont de type FIFO - First In First Out
+ * Exemple : une file d'attente
+ * Le premier élément ajouté est le premier à être récupéré.
+ *
+ * Dans cet exemple cela va afficher le nombre 10.
+ */
+document.write('<p>' + file.shift() + '</p>');
+
+
+/*
+ * Il existe également la méthode .unshift() qui ajoute au début 
+ * d'un tableau, décalant d'un cran toutes les valeurs existantes.
+ *
+ * http://devdocs.io/javascript/global_objects/array/unshift
+ */
+
+</script>

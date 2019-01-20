@@ -1,0 +1,767 @@
+------------------------------------------------------------------------------------------------------------------------------------------
+
+[Plugins/Extensions]
+	un plugin = une extension = un module = une add-on = un bundle = un composant. Tous ces termes désigne une fonctionnalité.
+	
+	Lorsque nous souhaitons une nouvelle fonctionnalité (obtenir un comportement particulier ou un affichage spécifique) qui n'est pas prévu par l'administration wordpress, nous allons rechercher, installer, activer, et configurer des plugins.
+		
+	A chaque problématique, nous allons recherche le plugin qui pourra nous rendre service !
+	
+	01 - SIMPLE LIGHTBOX
+	02 - META SLIDER
+	03 - CONTACT FORM 7
+	04 - WP GOOGLE MAP
+	04 - (BIS) CP GOOGLEMAP
+	05 - SHORTCODES ULTIMATE
+	06 - PAGE BUILDER PAR SITEORIGIN
+	07 - EASY GOOGLE FONT
+	08 - SHARE ON FACEBOOK
+	09 - DIGG DIGG
+	10 - ADD TO ANY
+	10b - RECOMMEND TO A FRIEND
+	11 - IMAGE WIDGET
+	12 - WYSIWYG WIDGETS / WIDGET BLOCKS
+	13 - DISPLAY WIDGETS
+	14 - WIDGET CSS CLASSES
+	15 - SEARCH EVERYTHING
+	16 - WORDPRESS RELATED POSTS
+	17 - YOAST SEO
+	18 - GOOGLE ANALYTICS BY MONSTERINSIGHTS
+	19 - GOOGLE XML SITEMAPS
+	20 - MAILPOET NEWSLETTERS
+	21 - ITHEMES SECURITY (FORMERLY BETTER WP SECURITY)
+	22 - LIMIT LOGIN ATTEMPTS
+	23 - LOCO TRANSLATE
+	24 - SUBSCRIBE TO COMMENTS
+	25 - ADMIN MENU EDITOR
+	26 - WOOCOMMERCE
+	
+Autres plugins pouvant être utiles :
+	- PHP Code Widget - permet d'ajouter du code php exécuté dans les widgets.
+	- Insert PHP - permet d'ajouter du code php exécuté dans les contenus (pages, articles, etc).	
+	- Page scroll to id https://wordpress.org/plugins/page-scroll-to-id/	
+	- wp no category base => permet d'éviter d'avoir écrit "category" dans l'url.
+
+	D'une manière générale, rendez-vous dans la partie Extension > Ajouter > Populaire pour connaitre les plugins qui ont la cote !
+
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/01.	[Plugins/Extensions] => SIMPLE LIGHTBOX
+
+		Problématique : Si vous afficher l'un de vos articles ou pages et qu'une photo est insérée, vous verrez que cette photo est cliquable et qu'elle emmène soit sur la page en cours, soit sur elle même. Ce qui n'est pas idéal.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Simple Lightbox"
+		Extension > Ajouter > Installer "Simple Lightbox" (Par Archetyped)
+		Extension > Ajouter > Activer "Simple Lightbox"
+		
+		Apparence > Lightbox > 	Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		
+		FRONT >					Si vous afficher l'un de vos articles ou pages et qu'une photo est insérée, vous verrez que cette photo est cliquable et qu'elle s'ouvre dorénavant dans une fenêtre interne (appelée lightbox) !
+		
+		Si jamais le clic sur une image ne fait pas apparaitre la box contenant l'image zoomé (effet attendu). il faut retourner dans l'article (ou la page) contenant l'image et choisir dans le paramétrage l'option "Lier au fichier média".
+
+		Conclusion : Nous avons installé un plugin qui a amélioré l'affichage de nos photos, lors d'un clic, sur notre site Wordpress.	
+
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/02.	[Plugins/Extensions] => META SLIDER
+
+		Problématique : Notre page d'accueil est plutôt "figée", pas très dynamique. Si nous souhaitons afficher un slider sur notre page d'accueil, nous ne pouvons pas le faire avec wordpress de base, nous allons donc rechercher un plugin.
+
+		Extension > Ajouter > Saisir dans la case de recherche : "Meta Slider"
+		Extension > Ajouter > Installer "Meta Slider" (Par Matcha Labs)
+		Extension > Ajouter > Activer "Meta Slider"
+		
+		Meta Slider > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		
+		Meta Slider > Une partie gratuite et une partie payante existe pour ce plugin.
+		Meta Slider > (+) Create your first slideshow
+		Meta Slider > Renommer : Mon Diaporama	
+		Meta Slider > Ajouter une diapositive (ajouter 5 images de grande taille, orienté paysage, type bandeau). Puis cliquer sur "Ajouter au diaporama".
+		Meta Slider > Sur chaque image (diapositive) nous pouvons ajouter un lien, une legende, gérer l'attribut alt, etc.
+		Meta Slider > Dans la colonne de droite plusieurs réglages sont possible (largeur, hauteur, effet, vitesse/délai, etc.).
+		Meta Slider > Dans la colonne de droite, un cadre nommé "Utilisation" contient le shortcode à insérer. Exemple : [metaslider id=10]
+		
+	[ShortCode]
+		Un ShortCode est un morceau de code entre crochet, détecté et reconnu par le système wordpress pour effectuer une action ou générer un affichage.
+		
+		Pages > Accueil > Modifier > Modifier la page d'accueil et ajouter votre slider, pour cela 2 solutions :
+			1 - Cliquer sur le bouton "Add Slider" et choisissez votre slider
+			2 - copier/coller le code correspondant à votre slider, directement dans la zone de contenu, exemple : [metaslider id=10]
+		
+		FRONT >		 Afficher votre page d'accueil et vous pourrez constater que vous qu'un diaporama s'affiche !
+		
+		Conclusion : Nous avons installé un plugin qui nous permet de bénéficier d'un diaporama/slider, sur notre site Wordpress.
+	
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/03.	[Plugins/Extensions] => CONTACT FORM 7
+
+		Problématique : Chaque site possède un formulaire de contact et nous n'en avons pas.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Contact Form 7"
+		Extension > Ajouter > Installer "Contact Form 7" (Par Takayuki Miyoshi)
+		Extension > Ajouter > Activer "Contact Form 7"
+		
+		Contact > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		
+		Contact > Un formulaire de contact est déjà disponible : Formulaire de contact 1
+		Contact > Copier le ShortCode du formulaire : [contact-form-7 id="14" title="Formulaire de contact 1"]
+		
+		Pages > Ajouter > Créer une page nommée "Contact".
+		Pages > Ajouter > Coller le ShortCode correspondant au formulaire : [contact-form-7 id="14" title="Formulaire de contact 1"]
+		Pages > Ajouter > Enregistrer votre page.
+		
+		Apparence > Menus > Cliquez sur les pages "Afficher tout" : choisir Contact et cliquer sur "Ajouter au menu". (si vous n'aviez pas activer l'option ""Ajouter automatiquement les pages de premier niveau à ce menu").
+		
+		FRONT >			Afficher la page contact, vous verrez que vous y trouverez un nouveau formulaire !
+						Il est possible d'envoyer un email (si l'antivirus est desactivé et si le smtp est correctement configuré dans le php.ini de wamp).
+
+		Contact > Créer un formulaire > Cette partie vous permet de créer d'autres formulaires.
+		Contact > Intégration > Cette partie permet de mettre en place un captcha (code de vérification pour éviter le spam ou l'ajout de commentaire par des robots).
+		
+		Conclusion : Nous avons installé un plugin qui nous permet d'obtenir rapidement un formulaire mais aussi tout autre type de formulaire, sur notre site Wordpress.
+	
+		
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/04.	[Plugins/Extensions] => WP GOOGLE MAP
+
+		Problématique : Plusieurs sites possèdent une Google Map et nous n'en avons pas.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Wp Google Map" 
+		Extension > Ajouter > Installer "Wp Google Map" (Par Wp Google Map).
+		Extension > Ajouter > Activer "Wp Google Map" 
+		
+		Cartes > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Cartes > Configuration Générale :
+			- ShortCode: Copier ce ShortCode, pour plus tard le coller dans la page de votre choix : [wpgmza id="1"]
+			- Nom de la carte: nos locaux	
+			- Niveau de zoom: A augmenter
+		Cartes > Marqueurs :
+			- Adresse / GPS: Ajouter une adresse valide. Cliquer sur "Ajouter un marqueur".
+			
+		Pages > Ajouter > Créer une page nommée "Accès".
+		Pages > Ajouter > Coller le ShortCode correspondant à la carte : [wpgmza id="1"]
+		Pages > Ajouter > Enregistrer votre page.
+			
+		Apparence > Menus > Cliquez sur les pages "Afficher tout" : choisir Accès et cliquer sur "Ajouter au menu". (si vous n'aviez pas activer l'option ""Ajouter automatiquement les pages de premier niveau à ce menu").
+			
+		FRONT >		Afficher la page accès, vous verrez que vous y trouverez une google map !
+		
+		Cartes > Revenir à la configuration et détaillé/commenté les options possibles (itinéraires, etc.).
+		
+		Conclusion : Nous avons installé un plugin qui nous permet d'obtenir rapidement une googlemap, sur notre site Wordpress.
+
+-------------------------------
+
+03/04bis.	[Plugins/Extensions] => CP GOOGLE MAPS
+
+		Extension > Ajouter > Saisir dans la case de recherche : "Cp Google Map" 
+		Extension > Ajouter > Installer "Cp Google Map" (Par CodePeople).
+		Extension > Ajouter > Activer "Cp Google Map" 
+		
+		Réglages > CodePeople Post Map > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Réglages > CodePeople Post Map > Langue de la carte : FRENCH 
+					
+		Pages > Ajouter > Créer une page nommée "Accès 2".
+		Pages > Ajouter > En dessous du titre et du texte, vous devrez retrouver des options concernant la google map. sinon vous pouvez l'activer en cliquant sur "options de l'écran > cocher Associer une adresse à l'article pour l'afficher sur Google Maps".
+		Pages > Ajouter > Google Map. 
+			Saisir : 
+				- Nom du lieu: ...	
+				- Description du lieu: ...
+				- Adresse (inclure le pays):
+				- Cliquer sur le bouton "vérifier".
+				- Selectionner 1 marqueur personnalisé (facultatif).
+			Validation :
+				Pour valider et afficher la carte, cliquez sur "Insérer le ShortCode dans la carte".
+		Pages > Ajouter > Enregistrer votre page.
+			
+		Apparence > Menus > Cliquez sur les pages "Afficher tout" : choisir Accès 2 et cliquer sur "Ajouter au menu". (si vous n'aviez pas activer l'option ""Ajouter automatiquement les pages de premier niveau à ce menu").
+			
+		FRONT >		Afficher la page accès 2, vous verrez que vous y trouverez une google map !
+		
+		Pages > Ajouter > Lors de la création d'autres pages, si nous ne voulons pas être "géné" par le formulaire de google map, nous pouvons cliquer sur "options de l'écran > décocher Associer une adresse à l'article pour l'afficher sur Google Maps".
+		
+		Conclusion : Nous avons installé un plugin qui nous permet d'obtenir rapidement une googlemap, sur notre site Wordpress.
+
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/05.	[Plugins/Extensions] => SHORTCODES ULTIMATE.
+
+		Problématique : Nous avons parfois besoin de créer certains affichage "accordéon, onglets, etc". 
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Shortcodes Ultimate" 
+		Extension > Ajouter > Installer "Shortcodes Ultimate" (Par Vladimir Anokhin).
+		Extension > Ajouter > Activer "Shortcodes Ultimate" 
+		
+		ShortCodes > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		ShortCodes > Réglages > Regarder la vidéo explicative.
+		
+		Pages > Ajouter > Créer une page nommée "multimédia".
+		Pages > Ajouter > Insérer le shortcode > Choisir LightBox
+			Content source : https://www.youtube.com/watch?v=z4cPLqPuEkw
+			Insérer le ShortCode.
+		Pages > Ajouter > Insérer le shortcode > Choisir Accordéon
+			Insérer le ShortCode.
+		Pages > Ajouter > Insérer le shortcode > Choisir Galerie
+			Insérer le ShortCode.
+		Pages > Ajouter > Insérer le shortcode > Choisir Animation
+			Insérer le ShortCode.
+		Pages > Ajouter > Insérer le shortcode > Choisir Tabs
+			Insérer le ShortCode.
+		Pages > Ajouter > Insérer le shortcode > Choisir Slider
+			Insérer le ShortCode.
+		Pages > Ajouter > Insérer le shortcode > Choisir Carousel
+			Insérer le ShortCode.
+		Pages > Ajouter > Insérer le shortcode > Choisir Bouton
+			Insérer le ShortCode.
+		... Faire le maximum de choix et insérer le plus de ShortCode possible pour les tests ...
+		Pages > Ajouter > Enregistrer votre page.
+			
+		Apparence > Menus > Cliquez sur les pages "Afficher tout" : choisir multimédia et cliquer sur "Ajouter au menu". (si vous n'aviez pas activer l'option ""Ajouter automatiquement les pages de premier niveau à ce menu").
+			
+		FRONT >		Afficher la page multimédia, vous verrez que vous y trouverez une vidéo YT en lightbox !
+		
+		Conclusion : Nous avons installé un plugin qui nous permet d'obtenir des comportements modernes, sur notre site Wordpress.
+
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/06.	[Plugins/Extensions] => PAGE BUILDER PAR SITEORIGIN
+
+		Problématique :  Nos pages web se ressemble et il peut être parfois utile de modifier l'agencement d'une page pour mettre en avant son contenu.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Page Builder" 
+		Extension > Ajouter > Installer "Page Builder" (Par siteorigin).
+		Extension > Ajouter > Activer "Page Builder" 
+		
+		Réglages > Page Builder > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		
+		Pages > Ajouter > Créer une page nommée "builder".
+		Pages > Ajouter > Cliquez sur l'onglet "Page Builder".
+			- Ajouter un widget => permet d'afficher un widget directement dans un contenu.
+			- Ajouter une rangée => permet de créer des zones sur sa page web.
+			- Prédéfinie => permet d'insérer un agencement prédéfinie sur sa page web.
+				- Il est probable qu'on vous adresse un message : " Pack de widgets SiteOrigin pour utiliser le widget SiteOrigin_Widget_Features_Widget. "
+				- Wordpress vous propose un lien permettant d'installer le plugin nommé "SiteOrigin Widgets Bundle" afin de profiter des mises en forme prédéfinie.
+		Pages > Ajouter > Enregistrer votre page.
+		
+		Si on ne vous a pas proposé d'installer le plugin "SiteOrigin Widgets Bundle" ou que la mise en page n'est pas concluante.
+		Extension > Ajouter > Saisir dans la case de recherche : "SiteOrigin Widgets Bundle" 
+		Extension > Ajouter > Installer "SiteOrigin Widgets Bundle" (Par siteorigin).
+		Extension > Ajouter > Activer "SiteOrigin Widgets Bundle"
+		Extension > SiteOrigin Widgets Bundle > Permet d'activer / désactiver certains composants d'affichage.
+		
+		Pages > Ajouter > Modifier la page nommée "builder".
+		Pages > Ajouter > Cliquez sur l'onglet "Page Builder".
+			- Prédéfinie => Vous devriez pouvoir vous servir de tous les templates (agencements) prédéfinis.
+			
+			Choisir les styles prédéfinie, installer les plugins dépendant si nécessaire. Remplacer les textes et les images dans les emplacements prédéfinies.
+			
+			Choisir rangée. prendre 2 ou 3 rangée et le répéter l'opération sur 5 lignes pour ensuite les remplir avec les widgets texte, widget image et widget block wysiwyg.
+			
+			Choisir Widget pour effectuer une démo.
+			
+		Pages > Ajouter > Enregistrer votre page.
+					
+		Apparence > Menus > Cliquez sur les pages "Afficher tout" : choisir builder et cliquer sur "Ajouter au menu". (si vous n'aviez pas activer l'option ""Ajouter automatiquement les pages de premier niveau à ce menu").
+			
+		FRONT >		Afficher la page builder, vous verrez que vous y trouverez un agencement selon votre choix.
+		
+		Apparence > Widgets > Ce plugin fournit de nombreux widgets intéressants !
+		
+		Conclusion : Nous avons installé un plugin qui nous permet de nous assister dans la création d'affichages personnalisés, sur notre site Wordpress.
+		
+		A noter : Le plugin payant Visual Composer (voir dev-plugins/js_composer.zip) permet également d'effectuer des mises en forme avancée.
+		
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/07.	[Plugins/Extensions] => EASY GOOGLE FONT
+
+		Problématique :  Il arrive parfois que nous voulions modifier la police d'écriture du texte, nous n'avons pas une telle option jusqu'à présent.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "easy google font" 
+		Extension > Ajouter > Installer "Easy Google Font" (Par siteorigin).
+		Extension > Ajouter > Activer "Easy Google Font" 
+		
+		Réglages > Google Font > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		
+		Réglages > Google Font > 
+			Control Name : mapolice.
+			Add CSS Selectors : mapolice (classe css qui appliquera le style de la police).
+		
+		Apparence > Personnaliser > Typography > 
+			Default Typography > Paragraphs > Nous pouvons choisir une police différente, une couleur différente, une position différente.
+		Apparence > Personnaliser > Typography > Enregistrer.
+		
+		FRONT >		Afficher votre site, vous verrez que la police d'écriture a été changée !
+		
+		Conclusion : Nous avons installé un plugin qui nous permet de modifier la police d'écriture, sur notre site Wordpress.
+		
+------------------------------------------------------------------------ RESEAUX SOCIAUX ------------------------------------------------------------------------
+
+03/08.	[Plugins/Extensions] => SHARE ON FACEBOOK
+
+		*** A DONNER EN EXERCICE ***
+		Problématique :  Nous souhaitons laisser la possibilité à l'internaute de partager notre site sur les réseaux sociaux.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "SHARE ON FACEBOOK" 
+		Extension > Ajouter > Installer "SHARE ON FACEBOOK" (Par David Goldstein).
+		Extension > Ajouter > Activer "SHARE ON FACEBOOK" 
+		
+		Réglages > Share On Facebook > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Réglages > Share On Facebook > Nous pouvons apporter des réglages :
+			- Link Type: style d'affichage (par exemple : lien + icone)
+			- Insertion Type: automatique (ou via un code à placer dans un fichier template)
+			- Page Type: Post only (activer uniquement pour les articles, pour les pages, ou les deux)...
+
+		FRONT >		 Faites le test. Afficher l'un de vos articles, vous verrez que le partage / like sur facebook est proposé.
+		
+		Conclusion : Nous avons installé un plugin qui permet de le partage sur les réseaux sociaux de notre site Wordpress.
+
+---------------------------------
+
+03/09.	[Plugins/Extensions] => DIGG DIGG
+		Problématique :  Nous souhaitons laisser la possibilité à l'internaute de partager notre site sur les réseaux sociaux. Ce plugin va permettre de favoriser une meilleure communication autour de votre site web en activant le partage sur les réseaux sociaux.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Image Widget" 
+		Extension > Ajouter > Installer "Image Widget" (Par Buffer).
+		Extension > Ajouter > Activer "Image Widget" 
+		
+		Digg Digg > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Digg Digg > Nous pouvons paramétrer un maximum d'options.
+
+		FRONT >		 Faites le test. Afficher l'un de vos articles, vous verrez que les réseaux sociaux sont proposés.
+		
+		Conclusion : Nous avons installé un plugin qui permet de le partage sur les réseaux sociaux de notre site Wordpress.
+		
+---------------------------------
+
+03/10.	[Plugins/Extensions] => ADD TO ANY
+		Problématique :  Nous souhaitons laisser la possibilité à l'internaute de partager notre site sur les réseaux sociaux.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "ADD TO ANY" 
+		Extension > Ajouter > Installer "ADD TO ANY" (Par AddToAny ).
+		Extension > Ajouter > Activer "ADD TO ANY" 
+		
+		Réglages > ADD TO ANY > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Réglages > ADD TO ANY > Nous pouvons apporter différents réglages.
+		
+		Article > Ajouter > Vous devriez voir une partie à cocher/décocher "Add To Any" > "Show sharing buttons". 
+
+		FRONT >		 Faites le test. Afficher l'un de vos articles, vous verrez que les réseaux sociaux sont proposés.
+		
+		Conclusion : Nous avons installé un plugin qui permet de le partage sur les réseaux sociaux de notre site Wordpress.
+	
+---------------------------------
+
+03/00.	[Plugins/Extensions] => RECOMMEND TO A FRIEND (ce plugin permet le partage à un ami).		
+
+------------------------------------------------------------------------ GENERAL/WIDGET ------------------------------------------------------------------------
+
+03/11.	[Plugins/Extensions] => IMAGE WIDGET
+		
+		*** A DONNER EN EXERCICE ***
+		Problématique :  Nous pouvons créer des widgets de texte mais nous ne pouvons pas ajouter d'image (pas de widget image).
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Image Widget" 
+		Extension > Ajouter > Installer "Image Widget" (Par Modern Tribe, Inc.).
+		Extension > Ajouter > Activer "Image Widget" 
+		
+		Apparence > Widgets > Nous avons dorénavant un widget nommé "Image Widget" qui peut accueillir une image.
+		Apparence > Widgets > Placer le dans une région et ajouter une image.
+
+		FRONT >		 Faites le test. Afficher votre site, vous verrez que le widget contient bien une image.
+		
+		Conclusion : Nous avons installé un plugin qui indépendemment des contenus nous permet d'afficher des images sur notre site Wordpress.
+	
+------------------------------------------------------------------------ GENERAL/WIDGET ------------------------------------------------------------------------	
+		
+03/12.	[Plugins/Extensions] => WYSIWYG Widgets / Widget Blocks.
+
+		Problématique :  Nous pouvons créer des widgets de texte mais nous ne pouvons pas mettre en forme le texte (gras, souligné, couleur, etc) nous n'avons pas d'éditeur.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "WYSIWYG Widgets" 
+		Extension > Ajouter > Installer "WYSIWYG Widgets" (Par Danny van Kooten).
+		Extension > Ajouter > Activer "WYSIWYG Widgets" 
+		
+		Widget Blocks > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		
+		Widget Blocks > Ajouter > Créer un widget comme s'il s'agissait d'un contenu : "mon widget mis en forme".
+		
+		Apparence > Widgets > Nous avons dorénavant un widget nommé "Widget block Widget" qui peut accueillir l'un des widgets créé précédemment.
+		Apparence > Widgets > Placer le dans une région et selectionner (avec le select option) le bon widget à charger.
+
+		FRONT >		 Faites le test. Afficher votre site, vous verrez que le widget contient bien un texte mis en forme (html) : "mon widget mis en forme".
+		
+		Conclusion : Nous avons installé un plugin qui nous permet d'avoir les options de mise en forme (html) dans les widgets sur notre site Wordpress.
+		
+------------------------------------------------------------------------ GENERAL/WIDGET ------------------------------------------------------------------------	
+
+03/13.	[Plugins/Extensions] => DISPLAY WIDGETS
+
+		Problématique : Nous pouvons créer et afficher des widgets mais nous ne pouvons pas gérer leur affichage
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Display Widgets" 
+		Extension > Ajouter > Installer "Display Widgets" (Par Danny van Kooten).
+		Extension > Ajouter > Activer "Display Widgets" 
+				
+		Apparence > Widgets > Déplier un des widget dans l'une des régions. Nous pouvons voir des options permettant :
+			- afficher / masquer le widget en fonction du statut de l'internaute.
+			- afficher / masquer le widget en fonction d'une page, d'un contenu, d'un type de contenu.
+			- Front Page : correspond à la page d’accueil de votre site
+			- Blog Page : correspond à toutes les pages de votre site
+			- Archives Page : correspond à toutes les pages d’archives
+			- Billet Page : correspond aux pages d’article seul
+			- 404 Page : correspond à la page d’erreur 404
+			- Recherche Page : correspond aux pages de Recherche
+			- l'option : "id des billets séparés par une virgule qui ne figurent pas" permet de gérer l'affichage de widget contenu par contenu. Pour découvrir le numéro ID correspondant, vous devez en mode édition/modification articles ou pages, cliquer sur le bouton “Obtenir le lien court” et relevez le chiffre qui est inscrit après ?p=
+
+		FRONT >		 Faites le test. Afficher votre site, vous verrez qu'un widget peut être afficher sur la page d'accueil mais pas sur les autres pages.
+		
+		Conclusion : Nous avons installé un plugin qui nous permet de personnaliser l'affichage des widgets, en fonction des pages sur notre site Wordpress.
+		
+------------------------------------------------------------------------ GENERAL/WIDGET ------------------------------------------------------------------------	
+
+03/14.	[Plugins/Extensions] => Widget CSS Classes 
+		
+		*** A DONNER EN EXERCICE ***
+		Problématique :  Nous pouvons créer et afficher des widgets mais nous ne pouvons pas vraiment les retoucher à l'aide du code CSS (de peur de selectionner et modifier/surchargé une classe générique relative à Wordpress.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Widget CSS Classes" 
+		Extension > Ajouter > Installer "Widget CSS Classes" (Par Strategy11).
+		Extension > Ajouter > Activer "Widget CSS Classes" 
+				
+		Apparence > Widgets > Déplier un des widget dans l'une des régions. Nous avons maintenant la possibilité d'ajouter une classe css spécifique que nous pourrons retouché dans notre feuille de style css.
+
+		FRONT >		 Faites le test. Afficher votre site, et avec firebug, vous verrez que notre widget est englobé par la bonne classe css.
+		
+		Conclusion : Nous avons installé un plugin qui nous permet d'ajouter des classes css sur les widgets afin de mieux les positionner sur notre site Wordpress.
+		
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/15.	[Plugins/Extensions] => SEARCH EVERYTHING
+		
+		*** A DONNER EN EXERCICE ***
+		Problématique :	Si nous saisissons le mot-clé "France" dans la case de recherche, les articles ayant été tagués avec ce mot-clé ne sont pas affichés dans les résultats de recherche.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Search Everything" 
+		Extension > Ajouter > Installer "Search Everything" (Par Zemanta).
+		Extension > Ajouter > Activer "Search Everything" 
+		
+		Réglages > Search Everything > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Réglages > Search Everything > Cocher "Rechercher dans tous les mots clés".
+		
+		FRONT > RECHERCHE >		Si nous saisissons le mot-clé "France" dans la case de recherche, les articles ayant été tagués avec ce mot-clé seront dorénavant affichés !
+		
+		Conclusion : Nous avons installé un plugin qui a amélioré le comportement de la case recherche sur notre site Wordpress.	
+	
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/16.	[Plugins/Extensions] => WordPress Related Posts
+		
+		Problématique : Lorsque l'internaute visite notre site, nous ne lui fournissons pas assez de contenu pour le relancer dans sa lecture et le dissuader de quitter notre site.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "WordPress Related Posts" 
+		Extension > Ajouter > Installer "WordPress Related Posts" (Par Zemanta Ltd).
+		Extension > Ajouter > Activer "WordPress Related Posts".
+				
+		FRONT >		 Afficher l'un de vos articles, vous verrez qu'une partie "Articles relatifs" a été ajouté automatiquement pour relancer l'internaute dans sa lecture et l'inciter à cliquer pour lire d'autres articles.
+		
+		Réglages > Wordpress Related Post > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Réglages > Wordpress Related Post > Cliquez sur "Advanced settings".
+			- Related Posts Title: permet de préciser le titre à afficher pour cette partie de l'affichage.
+			- Number of Posts: nombre de contenu en relation à proposer 
+			- Layout: permet de définir le style d'affichage
+			- Customize: permet d'afficher d'autres informations comme le nombre de commentaire, la date, etc.
+			- Exclude: Nous pouvons exclure des catégories.
+			
+		Apparence > Widget > Ce plugin ajoute également un widget plaçable dans la région de votre choix.
+			
+		FRONT >		 Afficher l'un de vos articles, vous verrez que la partie "Articles relatifs" a été mise à jour. WordPress Related Posts affichera en priorité : les articles partageant le même mot-clé, les articles de la même catégories, les autres articles...
+		
+		- Des images par défaut sont affichées, il est possible de modifier un article pour publier une 'image à la une' et avoir l'image représentative de l'article dans les suggestions de related post.
+					
+		Conclusion : Nous avons installé un plugin qui nous aidera a garder notre traffic sur notre site Wordpress.	
+
+------------------------------------------------------------------------ REFERENCEMENT ------------------------------------------------------------------------
+
+03/17.	[Plugins/Extensions] => Yoast SEO 
+
+		Problématique :  L'objectif de chaque site est d'acquérir de la visibilité, à quoi cela sert d'avoir un super site si personne ne connait l'adresse url ? Yoast vous permettra d'améliorer votre référencement.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Yoast SEO".
+		Extension > Ajouter > Installer "Yoast SEO" (Par Team Yoast).
+		Extension > Ajouter > Activer "Yoast SEO".
+		
+		Seo > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Seo > Commenter les réglages possibles.
+		
+		Articles > Ajouter > Sous le texte de l'article nous pouvons appercevoir une zone avec la possibilité de renforcer son positionnement sur les moteurs de recherches :
+			- Nous retrouvrons des pastilles : rouge, orange, vert (selon le niveau de qualité de la rédaction d'article).
+				-- Nous pouvons corriger le texte en fonction du rapport que fournit YOAST. nous pouvons également ajouter une description (cela éditera la balise meta description).
+			- Méta Robots Index : permet d'indiquer aux robots s'ils doivent référencé ce type de contenu
+			- Méta Robots Follow : permet d'indiquer aux robots s'ils doivent suivre cette page.
+				
+		Conclusion : Nous avons installé un plugin qui contribue a amélioré le référencement de notre site Wordpress.		
+		
+------------------------------------------------------------------------ REFERENCEMENT ------------------------------------------------------------------------
+
+03/18.	[Plugins/Extensions] => Google Analytics by MonsterInsights
+
+		Problématique :  Après avoir référencé votre site web, vous voudriez certainement obtenir des statisitques d'accès, ce plugin est donc fait pour vous.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Google Analytics by MonsterInsights".
+		Extension > Ajouter > Installer "Google Analytics" (Par MonsterInsights).
+		Extension > Ajouter > Activer "Google Analytics by MonsterInsights".
+		
+		...
+
+------------------------------------------------------------------------ REFERENCEMENT ------------------------------------------------------------------------
+
+03/19.	[Plugins/Extensions] => Google XML Sitemaps
+
+		Problématique :  Pour satisfaire les moteurs de recherche, nous aurons besoin de créer un sitemap (document xml centralisant toutes nos urls).
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Google XML Sitemaps".
+		Extension > Ajouter > Installer "Google XML Sitemaps" (Par Arne Brachhold).
+		Extension > Ajouter > Activer "Google XML Sitemaps".
+		
+		...
+
+------------------------------------------------------------------------ NEWSLETTER ------------------------------------------------------------------------
+
+03/20.	[Plugins/Extensions] => MailPoet Newsletters
+
+		Problématique :  Nous voulons communiquer avec nos internautes via des newsletters / emailing.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "MailPoet Newsletters".
+		Extension > Ajouter > Installer "MailPoet Newsletters" (Par MailPoet).
+		Extension > Ajouter > Activer "MailPoet Newsletters".
+		
+		Apparence > Widget > Un widget a été créé avec l'activation du module. Ce widget permettra aux internautes de s'abonner à votre newsletter. Placer le dans une région : Mailpoet Subscription Form.
+		
+		FRONT >		 Afficher votre site et vous verrez qu'un widget vous propose l'abonnement à la newsletter du site.
+		
+		MailPoet > Newsletters >  Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		MailPoet > Newsletters >  Cliquer sur "Merci ! Maintenant direction MailPoet."
+		MailPoet > Newsletters >  Cliquer sur "Créez-en une nouvelle".
+		MailPoet > Newsletters >  Newsletter classique (automatique: nous pouvons planifier son envoi avec une récurrence)
+		MailPoet > Newsletters >  Choisir un sujet.
+		MailPoet > Newsletters >  Les listes correspondent à des thèmes. sur un site généraliste, nous pourrions imaginer une newsletter pour les actualités cuisine, et une autre pour les actualités politique, etc.
+		MailPoet > Newsletters >  Créer votre propre graphisme avec l'éditeur. cliquez sur les différentes zones pour les éditer (texte/images) et ajouter des widgets (drag&drop) via le cadre en haut à droite
+		MailPoet > Newsletters >  Vous pouvez envoyer un apperçu (si l'antivirus est desactivé et si le smtp est correctement configuré dans le php.ini de wamp) utile avant de l'envoyer à plusieurs centaines/milliers de personne. Cliquer sur "Etape Suivante".
+		MailPoet > Terminer votre newsletter.
+		
+		MailPoet > Abonnés >  Nous pouvons ajouter un abonné - ajoutez une liste - voir les listes - importez - exportez
+		
+		MailPoet > Paramètres > Parcourrir et expliquer les différents onglets...
+				
+		Conclusion : Nous avons installé un plugin qui nous permet de proposer des newsletters aux internautes de notre site Wordpress.
+
+------------------------------------------------------------------------ SECURITE ------------------------------------------------------------------------
+
+03/21.	[Plugins/Extensions] => iThemes Security (formerly Better WP Security)
+
+		Problématique :  Wordpress est sécurisé par défaut. les plugins qu'on installe ne le sont pas.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "iThemes Security" 
+		Extension > Ajouter > Installer "iThemes Security" (Par iThemes).
+		Extension > Ajouter > Activer "iThemes Security" 
+		
+		Réglages > Security > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Réglages > Security > Commenter les réglages
+			- nous pouvons modifier les droits d'accès au fichiers (chmod).
+			- nous pouvons effectuer un backup de la base de données.
+			- etc.
+		
+		Conclusion : Aucun site n'est infaillible mais ce plugin peut assurer une bonne partie de la sécurité de notre site Wordpress.
+		Lien : http://www.geekpress.fr/securite-wordpress/
+		
+------------------------------------------------------------------------ SECURITE ------------------------------------------------------------------------
+
+03/22.	[Plugins/Extensions] => LIMIT LOGIN ATTEMPTS
+
+		Problématique :  Wordpress est sécurisé par défaut. les plugins qu'on installe ne le sont pas.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Limit Login Attempts" 
+		Extension > Ajouter > Installer "Limit Login Attempts" (Par Johan Eenfeldt).
+		Extension > Ajouter > Activer "Limit Login Attempts" 
+		
+		Réglages > Limit Login Attempts > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		Réglages > Limit Login Attempts
+			- nous pouvons bloquer une personne qui tenterait de se connecter à notre interface d'administration par brutforce.
+				Par exemple, au bout de 3 tentatives avec mot de passe éronné, nous pouvons bloquer l'accès à l'authentification (si le pirate n'utilise pas un vpn pour le changement d'adresse ip).
+				
+		Conclusion : Aucun site n'est infaillible mais ce plugin peut assurer une partie de la sécurité lié à l'interface d'administration sur notre site Wordpress.
+		
+------------------------------------------------------------------------ TRADUCTION ------------------------------------------------------------------------
+
+03/23.	[Plugins/Extensions] => LOCO TRANSLATE
+
+		Problématique :  Wordpress est en Français par défaut. les plugins qu'on installe ne le sont pas toujours.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Loco Translate".
+		Extension > Ajouter > Installer "Loco Translate" (Par Tim Whitlock).
+		Extension > Ajouter > Activer "Loco Translate".
+		
+		Loco Translate > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+		
+		Loco Translate > Traductions > Par exemple pour le plugin Ithems Security, nous pouvons cliquer sur "Ajouter une nouvelle langue" et "traduire le plugin", nous pouvons ajouter des traductions.	
+				
+		Réglages > Menu Editor > Admin Menu > Nous pouvons appercevoir que nous pouvons complétement modifier le menu du BackOffice.
+		
+		Back >		Actualiser votre BackOffice, vous verrez que l'administration à changée.
+		
+		Conclusion : Nous avons installé un plugin qui nous permet de traduire certain contenu sur notre site Wordpress.
+	
+------------------------------------------------------------------------ GENERAL ------------------------------------------------------------------------
+
+03/24.	[Plugins/Extensions] => SUBSCRIBE TO COMMENTS
+
+	*** A DONNER EN EXERCICE ***
+	Problématique :  
+		Prenez 2 navigateurs : chrome & firefox.
+			Firefox dépose un commetaire sur un article.
+			Chrome répond à ce commentaire (imaginons 2 jours plus tard)
+			Firefox n'est pas au courant qu'une réponse a été apporté.
+			Nous aimerions tenir au courant par email tous les participants de la discussion (comme sur un forum) pour les inciter à revenir sur notre site et créer du dialogue entre eux.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Subscribe To Comments" 
+		Extension > Ajouter > Installer "Subscribe To Comments" (Par Mark Jaquith).
+		Extension > Ajouter > Activer "Subscribe To Comments" 
+		
+		Front> Afficher la partie commentaire d'un article. Le lien "Notify me of followup comments via e-mail" (à tester en tant que visiteur, avec un autre navigateur) apparait automatiquement sur chaque article ainsi tout le monde peut être prévenu par email en cas de réponse.
+	
+		Conclusion : Nous avons installé un plugin qui nous permettra de favoriser les échanges entre les internautes sur notre site Wordpress.
+		
+------------------------------------------------------------------------ BACKOFFICE ------------------------------------------------------------------------
+
+03/25.	[Plugins/Extensions] => ADMIN MENU EDITOR
+
+		Problématique :  Notre BackOffice s'allourdit et le menu devient très chargé. il peut être utile de ré-agencer le menu d'administration.
+		
+		Extension > Ajouter > Saisir dans la case de recherche : "Admin Menu Editor" 
+		Extension > Ajouter > Installer "Admin Menu Editor" (Par Janis Elsts).
+		Extension > Ajouter > Activer "Admin Menu Editor" 
+		
+		Réglages > Menu Editor > Cette sous-partie n'existait pas avant l'installation du plugin. Lorsque nous ajoutons un plugin, il faut toujours estimer l'apport du plugin en vérifiant ce qui a changé en backoffice et/ou en frontoffice.
+				
+		Réglages > Menu Editor > Admin Menu > Nous pouvons appercevoir que nous pouvons complétement modifier et ré-agencer le menu du BackOffice.
+		
+		Back >		Actualiser votre BackOffice, vous verrez que l'administration à changée.
+		
+		Conclusion : Nous avons installé un plugin qui nous permet de modifier les rubriques et l'agencement de notre backoffice, sur notre site Wordpress.
+		
+------------------------------------------------------------------------ ECOMMERCE ------------------------------------------------------------------------
+
+03/26.	[Plugins/Extensions] => WOOCOMMERCE
+	Problématique :  Nous souhaitons vendre sur notre site.
+	
+	Extension > Ajouter > Saisir dans la case de recherche : "WooCommerce" 
+	Extension > Ajouter > Installer "WooCommerce" (Par WooThemes).
+	Extension > Ajouter > Activer "WooCommerce".
+
+	WooCommerce>Système Status>Tools : Cliquer sur Forcer la mise à niveau de la traduction.
+	WooCommerce>Se rendre à l'emplacement suivant : \wordpress\wp-content\languages\plugins\ et y glisser les fichiers suivants : woocommerce-admin-fr_FR.mo - woocommerce-admin-fr_FR.po - woocommerce-fr_FR.mo - woocommerce-fr_FR.po
+
+	WooCommerce>Settings> Installer les pages --- cela permet d'installer et de déployer les pages suivantes : Cart (panier), Checkout (page commande), My Account (mon compte), Shop (produits).
+	WooCommerce>Système Status>Tools : Installer les pages --- pour ceux qui n'ont pas pu le faire précédemment.
+	Woocommerce>Etat du systeme > Onglet du haut "Outils" > Installer les pages Woocommerce
+
+	Woocommerce > Parametres > General:
+		Emplacement de base/ Base Location => France
+		Emplacement de vente/ Selling Location(s) => Sell to all countries : on peux vendre dans certains pays uniquement + choix simple ou multiple dans la liste.
+		Notice Boutique => Texte d'aide.
+		API REST => (architecture) à laisser cocher.
+		Devise/ Currency => euros
+		Position devise/ Currency Position => Right with space
+		Enregistrer les changements.
+
+	Woocommerce > Parametres > Produits:
+		Produits> General : A commenter - R.A.S
+		Produits> Affichage : A commenter - R.A.S - Page boutique pour choisir la page qui affichera tous les produits + options de tri etc...- taille des images
+		Produits> Inventaire : Activer la gestion du stock 
+		
+	Woocommerce > Parametres > TVA
+		TVA>Options TVA> Activer la TVA - permet de configurer la TVA et de préciser si les prix sont HT ou TTC sur la boutique
+		TVA>Taux Standards> R.A.S
+		TVA>Taux Reduced Rate> R.A.S
+		TVA>Taux Zero Rate> R.A.S
+		
+	Woocommerce > Parametres > Commande > options commande
+		 Commande > options commande> - permet d'activer et configurer les moyens de paiement
+		 Commande > options commande> Choisir une page pour les CGV
+		 Commande > Virement Bancaire> n° de compte - R.A.S
+		 Commande > Chèque> R.A.S
+		 Commande > Paiement à la livraison> R.A.S
+		 Commande > Paypal> R.A.S
+		 
+	Woocommerce > Parametres > Livraison
+		Livraison> - permet de mettre en place les livraisons qui apparaitront lors du paiement du panier avec le choix entre les différents modes de livraison.
+		Livraison> Taux Fixe> - configurer les couts et nous pouvons choisir une classe de livraison, pour cela il faut les déclarer au préalable dans la partie Produits > Classes de livraison
+		Produits > Classes de livraison> Créer SoColissimo & ChronoPost avec description "suivi de votre colis", "livré en seulement 24h"
+		Livraison> Gratuite> R.A.S
+		Livraison> internationale> R.A.S
+		Livraison> locale> R.A.S
+		Livraison> Point de vente > R.A.S
+
+	Woocommerce > Parametres > Comptes > R.A.S - pour définir les pages (mon compte, mot de passe perdu etc...)
+
+	Woocommerce > Parametres > Emails > - quelques options pour les envoi de mails aux clients.
+		Emails > Options d'email > R.A.S
+		Emails > Nouvelle commande > R.A.S
+		Emails > Commande annulée > R.A.S
+		Emails > Commande en cours > R.A.S
+		Emails > Commande terminée > R.A.S
+		Emails > Facture client > R.A.S
+		Emails > Note client > R.A.S
+		Emails > Réinitialisation du mot de passe > R.A.S
+		Emails > Nouveau compte  > R.A.S
+		
+	Apparence > Thèmes > Prendre un thème woocommerce (Storefront / Boutique / Topshop), la base étant le thème storefront afin d'avoir une cohérence graphique sympa entre le plugin et le thème
+
+	Produits > catégories : - Créer des catégories (avec sous-catégories) même principe que les catégories articles
+
+	Apparence > menu - Ajouter les catégories de produits au menu
+
+	Produits > ajouter produits	: mettre un titre, une description
+		UGS : la référence du produit
+		Inventaire : Gérer le stock
+		Prix de vente : prix référence
+		Inventaire : R.A.S
+		Attributs : pour saisir des informations supplémentaire sur le produit qui seront affiché plus tard sur la fiche produit, exemple : composition => coton.
+		Image à la une : Mettre une image à la une pour obtenir une photo avec le produit. - L'image à la une sera celle utilisée sur la page boutique
+		Gallerie : La gallerie produit permet de mettre une ou plusieurs image(s) générale au produit (pas aux éventuelles variations)
+		
+
+	Produits > ajouter produits	: Pour créer un produits avec variations (couleur, taille, autres ...)
+		Données produits > général > liste select => produit variable
+			- Dans le cas de variation, le prix ne se trouve plus dans l'onglet général mais lors de la création de chaque variation.
+			- Créer un attribut: attributs > ajouter
+			- nommer l'attribut exemple: couleur puis mettre des valeurs => bleu | blanc | vert | orange | etc ...
+			- nommer l'attribut exemple: taille puis mettre des valeurs => s | m | l | xl | etc ...
+			- cocher l'option utiliser dans les variations
+			- Sauvegarder les attributs
+			
+			- variation > Cliquez sur Ajouter une variation (après avoir créer des attributs)
+			- Choisir dans la liste de selection une variation mettre une référence UGS
+			- Mettre un prix régulier (si un prix de vente est rentré, le produit se met en promo. Le prix régulier est suffisant)
+			- Cliquez sur le carré blanc afin d'affecter une image spécifique à cette variation (lors du choix par le client de la variation sur la page produit l'image sera remplacé par celle ci)
+			- Mettre à jour le produit pour enregistrer la variation
+			- Créer autant de variation que nécessaire
+			
+			- Produits Liés permet de suggérer d'autres produits : dans la fiche produit du tshirt, je trouverais "vous aimerez aussi..." avec : le jean.
+			- Ventes Croisées permet de suggérer d'autres produits : dans le panier, je trouverais "Vous serez peut-être intéressé par…"
+			
+			Au niveau de la page produit on retrouvera une option de choix par exemple une liste select qui permettra à l'utilisateur de choisir la version du produit qu'il désire.
+			
+	Commandes > Faire une simulation d'achat et voir que la commande est corretement listée en backoffice.
+
+	Code Promos > Ajouter des codes promos.
+
+	Rapports > Voir les rapports
+
+	BackOffice > Parcourrir la rubrique WooCommerce et la rubrique Produits.
+
+------------------------------------------------------------------------------------------------------------------------------------------

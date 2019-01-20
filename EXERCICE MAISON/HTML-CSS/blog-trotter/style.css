@@ -1,0 +1,11 @@
+ul {
+  list-style: none;
+}
+#topsection {
+  display: flex;
+}
+p {
+  text-align: justify;
+  width: 80%;
+  margin: auto;
+}

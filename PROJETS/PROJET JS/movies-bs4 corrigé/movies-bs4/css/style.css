@@ -1,0 +1,33 @@
+.navbar {
+	background: #081c24 !important
+}
+.card {
+	background: transparent;
+}
+a.navbar-brand {
+	color: #64eb73e6 !important;
+}
+.item:hover {
+	background: #234
+}
+.item:hover h2 {
+	color: #197de2
+}
+.item:hover p {
+	color: #fff
+}
+.card-body {
+	min-height: 187px
+}
+h3 {
+	font-size: 1.15rem;
+}
+.details {
+	background: #f1f1f7
+}
+.video {
+	text-align: center;
+}
+.error {
+	color: red
+}

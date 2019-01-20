@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar color="warning">
+  
+      <ion-buttons slot="start">
+        <ion-button (click)="closeComment()">
+            <ion-icon slot="start" name="close"></ion-icon>
+            Fermer
+        </ion-button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+
+      <h1>Votre avis</h1>
+      <!-- LE FORMULAIRE D'AJOUT DE COMMENTAIRE -->
+      <form [formGroup]="commentForm" (ngSubmit)='onSubmit(commentForm)'>
+
+          <ion-item>
+              <ion-label>Note sur 5</ion-label>
+              <ion-select formControlName="score" cancelText="Annuler">
+                <ion-select-option value="1">1</ion-select-option>
+                <ion-select-option value="2">2</ion-select-option>
+                <ion-select-option value="3">3</ion-select-option>
+                <ion-select-option value="4">4</ion-select-option>
+                <ion-select-option value="5">5</ion-select-option> 
+              </ion-select>
+          </ion-item>
+  
+          
+  
+          <ion-item>
+            <ion-input formControlName="name" placeholder="Votre nom" type="text"></ion-input>
+          </ion-item>
+  
+          <div text-right margin *ngIf="!commentForm.controls.name.valid && commentForm.controls.name.dirty" class="validator-error">
+              <small>Nom requis</small>
+          </div>
+  
+          <ion-item>
+            <ion-textarea formControlName="comment" placeholder="Votre message" type="text"></ion-textarea>
+          </ion-item>
+  
+          <div text-right margin *ngIf="!commentForm.controls.comment.valid && commentForm.controls.comment.dirty" class="validator-error">
+              <small >Merci de saisir votre commentaire</small>
+          </div>
+          <hr>
+          <ion-button 
+          [disabled]="!commentForm.valid" 
+          shape="round"
+          color="dark"
+          expand="full"
+          type="submit">
+              Envoyer
+          </ion-button>
+    </form>
+    
+  </ion-content>

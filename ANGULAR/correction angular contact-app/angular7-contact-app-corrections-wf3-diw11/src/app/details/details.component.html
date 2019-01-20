@@ -1,0 +1,26 @@
+<section *ngIf="details.name">
+<div [@slideLeftAnimation] class="mt-2 mb-2">
+    <h2>
+        <a href="#" routerLink="/"><i class="fas fa-arrow-left"></i></a> 
+        {{details.name.first | firstletter}} <small>{{details.name.last | uppercase }}</small>    
+    </h2>
+</div>
+
+<div [@slideLeftAnimation] class="jumbotron border">
+
+    <img class="img-thumbnail float-left mr-3" src="{{details.picture.large}}">
+    <p class="lead" *ngIf="details.location.city">{{details.location.street}} {{details.location.postcode}} {{details.location.city}} </p>
+    <ul>
+        <li *ngIf="details.cell"><i class="fas fa-mobile-alt"></i><span>{{details.cell}}</span></li>
+        <li *ngIf="details.email"><i class="far fa-envelope-open"></i><span>{{details.email}}</span></li>
+        <li *ngIf="details.location.city"><i class="fas fa-map-marker"></i><span>{{details.location.city | uppercase}}</span></li>
+    </ul>
+
+    <hr class="my-4">
+    
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" (click)="sayHello($event)" href="#" role="button"> Suivre {{details.name.first | firstletter }}</a>
+    </p>
+</div>
+</section>
+

@@ -1,0 +1,83 @@
+
+<div *ngIf="loading">
+  <div class="text-center">
+      <img src="assets/Rolling.gif" alt="Chargement...">
+  </div>   
+</div> 
+<div *ngIf="!loading">
+ 
+  <div class="d-flex mt-2 mb-2">
+      <h2 class="mr-auto">{{contacts? contacts.length : 0}} contact(s)</h2>
+      <button *ngIf="!isFormVisible" type="button" (click)="orderBy()" class="btn btn-outline-info btn-sm mx-2">Trier par {{orderCriteria==='date'? "nom" : "date"}}</button>
+      <button *ngIf="!isFormVisible" type="button" (click)="showContactForm($event)" class="btn btn-dark">+ Ajouter</button>
+      <i *ngIf="isFormVisible" (click)="showContactForm($event)" class="fas fa-times"></i>
+  </div>
+
+  <app-add-contact [contact]="selectedContact" 
+                   [contactIndex]="selectedContactIndex" 
+                   (addEvent)="storeContact($event)" 
+                   *ngIf="isFormVisible">
+  </app-add-contact>
+
+<div class="input-group input-group-lg">
+    <span class="input-group-addon" id="sizing-addon1"></span>
+    <input type="text" class="form-control" #searchword (keyup)='0' placeholder="Rechercher...">
+    <!-- <p>Vou recherchez : {{searchword.value}}</p>  -->
+     <!-- 
+      On peut récupérer directement dans le template la saisie d'un utilisateur dans un <input>
+      - sur la balise <input> on déclare une variable avec #nomDeLaVariable
+      - on accède à cette variable dans le template avec {{nomDeLaVariable.value}}
+      - Attention : on utilise l'evenement keyup aussi sur l'input pour mettre à jour la valeur de cette varaible à chaque fois que l'utilisateur presse une touche
+      -->
+</div>
+<ul [@slideAnimation] class="list-group">
+    <!-- 
+      la directive de structure *ngFor="let variable of array"
+      permet d'afficher une liste directement dans la vue depuis une variable de type array
+      lorsque notre component dispose d'un array (ici "contacts" qui est déclaré dans contacts.component.ts)
+    -->
+
+    <!-- 
+      (click)="showDetails(contact)" 
+      Dans une vue html les directives d'évènement sont entre ()
+      Ici (click)="showDetails(contact)" exécutera la méthode showDetails() déclarée dans contacts.component.ts
+    -->
+
+    <!-- 
+      Le PIPE pour filtrer la liste des contact 
+      On peut l'ajouter dans le *ngFor="let contact of contacts | filterContacts:searchword.value"
+    -->
+  <li (click)="showDetails($event, contact)" 
+      *ngFor="let contact of contacts | filterContacts:searchword.value | order:orderCriteria; let i=index" 
+      class="list-group-item list-group-item-action">
+    <button class="btn btn-light" (click)="deleteContact($event, contact)">
+      <i class="far fa-trash-alt"></i>
+    </button>
+   
+    <img [class.women]="contact.gender=='female'" class="img-thumbnail" width="50" src="{{contact.picture.thumbnail}}">
+    {{contact.name.first | firstletter}} {{contact.name.last | uppercase}}
+
+    <span class="float-right">
+      <span class="d-none d-md-inline">Ajouté le {{contact.registered.date | date:"dd/MM/yy"}}</span>
+
+      <button title="Modifier" (click)="showContactForm($event, contact)" class="btn btn-light d-none d-md-inline">
+        <i class="fas fa-pencil-alt"></i>
+      </button>
+
+      <button title="Ajouter aux favoris" (click)="addOrRemoveToFav($event, contact)" class="btn btn-light">
+        <i class="fa-star primary" [style.color]="calculateClass(contact)?'orange':'black'" [ngClass]="calculateClass(contact)?'fas':'far'"></i>
+      </button>
+    </span>
+  </li>
+
+
+</ul>
+
+<!-- {{contacts | json}} -->
+</div>
+
+
+
+
+
+

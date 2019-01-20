@@ -1,0 +1,47 @@
+h1
+{
+    text-align: center;
+}
+#total span
+{
+    font-weight: bold;
+    font-style: italic;
+
+    color: red;
+}
+
+main
+{
+    display: flex;
+
+    justify-content: center;
+}
+ul#photo-list
+{
+    display: flex;
+
+    width: 800px;
+
+    list-style: none;
+
+    flex-wrap: wrap;
+}
+ul#photo-list li
+{
+    margin: 1em;
+    padding: .5em;
+}
+ul#photo-list li:hover
+{
+    transition: .5s;
+
+    background: silver;
+}
+#total
+{
+    text-align: center;
+}
+.selected
+{
+    background: forestgreen !important;
+}

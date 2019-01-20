@@ -1,0 +1,34 @@
+wordpress\wp-content\themes\twentytwelve\page-templates\ :
+
+Créer un fichier nommé "modele-trois-colonnes.php" avec le code suivant :
+
+	<?php
+	/*** Template Name: Modele Trois Colonnes */
+	get_header(); ?>
+
+	<div class="modele-trois-colonne-colonne-gauche"> ... </div>
+	<div id="primary" class="site-content modele-trois-colonne-colonne-centrale">
+		<div id="content" role="main">
+
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', 'page' ); ?>
+				<?php comments_template( '', true ); ?>
+			<?php endwhile; // end of the loop. ?>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+	<div class="modele-trois-colonne-colonne-droite"> ... </div>
+	<div class="clear"></div>
+
+	<?php get_footer(); ?>
+	
+	
+	
+	
+	
+style.css
+Ajouter le code suivant :
+		.modele-trois-colonne-colonne-gauche{ float: left; max-width: 160px; border-right: 1px solid #c0c0c0;padding: 20px; min-height: 700px;	}
+		.modele-trois-colonne-colonne-centrale{ float: left; max-width: 500px;	padding: 20px;	min-height: 700px;	}
+		.modele-trois-colonne-colonne-droite{	float: left; max-width: 160px;	border-left: 1px solid #c0c0c0;	padding: 20px;	min-height: 700px;	}
+		.clear{	clear: both; }

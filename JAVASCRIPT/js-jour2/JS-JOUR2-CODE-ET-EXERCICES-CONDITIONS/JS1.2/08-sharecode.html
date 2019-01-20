@@ -1,0 +1,26 @@
+<script>
+
+// **** Les chaînes de caractères sont aussi des objets d'une classe String.
+
+
+// Déclaration d'une variable.
+var prenom;
+
+prenom = window.prompt('Comment vous appelez-vous ?');
+
+
+/*
+ * En utilisant l'opérateur "point" sur une variable de type String on
+ * convertit la chaîne de caractères en un objet de la classe String.
+ *
+ * Voir les méthodes et les propriétés de la classe String :
+ * http://devdocs.io/javascript-string/
+ */
+
+// Conversion en majuscules.
+prenom = prenom.toUpperCase();
+
+// Affichage du nombre de caractères du prénom.
+document.write(prenom.length);
+
+</script>

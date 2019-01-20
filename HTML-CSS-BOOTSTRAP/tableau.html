@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- en-tête du document -->
+  <title>Les tableaux</title>
+  <meta name="description" content="Les tableaux en HTML/CSS" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Spicy+Rice" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+</head>
+
+<body>
+  <header>
+    <h1>Mon premier site en HTML/CSS</h1>
+  </header>
+
+  <section class="menus">
+    <nav>
+      <ul>
+        <li><a href="index.html">Structure</a></li>
+        <li><a href="texte.html">Texte</a></li>
+        <li><a href="selecteurs.html">Selecteurs</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li><a href="position.html">Position</a></li>
+        <li><a href="tableau.html">Tableaux</a></li>
+        <li><a href="listes.html">Listes</a></li>
+        <li><a href="lien&menu.html">Lien et Menu</a></li>
+        <li><a href="formulaire.html">Formulaire</a></li>
+        <li><a href="Multimédia.html">Multimédia</a></li>
+        <li><a href="Animation.html">Animation</a></li>
+      </ul>
+    </nav>
+  </section>
+  <main>
+    <h2>Les tableaux</h2>
+    <section class="tableau">
+      <table>
+        <caption>
+          <i class="fas fa-fighter-jet jet"></i>Vol Paris/Rome<i class="fas fa-fighter-jet jet"></i>
+        </caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>02/12/2018</th>
+            <th>03/12/2018</th>
+            <th>01/12/2018</th>
+          </tr>
+        </thead>
+        <!--
+            La balise tfoot doit se trouver avant la balise tbody(normexhtml)
+          -->
+        <tfoot>
+          <tr>
+            <th></th>
+            <th>02/12/2018</th>
+            <th>03/12/2018</th>
+            <th>01/12/2018</th>
+          </tr>
+        </tfoot>
+
+        <tbody>
+          <tr>
+            <th rowspan="2">Air France</th>
+            <td>Départ 10H - Arrivée 13H</td>
+            <td>Départ 15H - Arrivée 18H</td>
+            <td>Départ 17H - Arrivée 20H</td>
+          </tr>
+          <tr>
+            <td>200€</td>
+            <td>180€</td>
+            <td>170€</td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th rowspan="2">Alitalia</th>
+            <td>Départ 6H - Arrivée 9H</td>
+            <td>Départ 13H - Arrivée 16H</td>
+            <td>Départ 21H - Arrivée 00H</td>
+          </tr>
+          <tr>
+            <td>120€</td>
+            <td>250€</td>
+            <td>100€</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer></footer>
+</body>
+
+</html>

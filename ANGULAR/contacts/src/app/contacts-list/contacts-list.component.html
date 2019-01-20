@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-2 fav">fav</div>
+
+    <div class="col-12 col-md-10">
+      <!-- LOADER GIF -->
+      <img *ngIf="false" class="loading_gif d-block m-auto" src="../../assets/loading.svg" alt="loading" />
+
+      <!-- NOMBRE DE CONTCTS DE LA LISTE -->
+      <h2>{{ contacts.length }} contact(s)</h2>
+
+      <!-- CHAMPS DE RECHERCHE -->
+      <div class="input-group mb-1 mt-3">
+        <input #search (keyup)="(0)" type="text" class="form-control" placeholder="Rechercher..." />
+      </div>
+
+      <!-- LISTE DES CONTACTS -->
+      <ul class="list-group">
+        <li (click)="showContact(contact)" *ngFor="let contact of (contacts | filterList: search.value)" class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            <button (click)="deleteContact(contact)" class="btn btn-light">
+              <i class="far fa-trash-alt"></i>
+            </button>
+            <img [class.boy]="contact.gender == 'male'" [class.girl]="contact.gender == 'female'" class="img-thumbnail" [src]="contact.picture.medium" alt="bg" />
+            {{ contact.name.first | firstLetterCap }}
+            {{ contact.name.last | firstLetterCap }}
+          </span>
+          <span>ajouté le {{ contact.registered.date | date: "dd/MM/yyyy" }}
+            <button class="btn btn-light"><i class="far fa-star"></i></button>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

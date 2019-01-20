@@ -1,0 +1,34 @@
+<script>
+
+// **** Syntaxe d'une boucle for avec uniquement la partie comparaison.
+
+
+// Déclaration d'une variable.
+var compteur;
+
+// Equivalent à la partie initalisation de la boucle.
+compteur = 1;
+
+
+/*
+ * Boucle comptant de 1 à 10 inclus.
+ *
+ *
+ * Pour rappel une boucle for a trois parties :
+ *
+ * for(INITIALISATION; COMPARAISON; MISE A JOUR)
+ * {
+ *     // ...
+ * }
+ */
+for(; compteur <= 10;)
+{
+    document.write('<p>Le compteur vaut <strong>' + compteur + '</strong>.</p>');
+
+    // Equivalent à la partie mise à jour de la boucle.
+    compteur++;
+}
+
+// Sans cette boucle il aurait fallu écrire manuellement dix fois document.write()...
+
+</script>

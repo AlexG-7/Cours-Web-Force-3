@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+	<h2>Créer un menu accordéon avec jQuery</h2>
+
+	<div id="accordion-list">
+	<!-- 
+	C'EST ICI QUE L'ON GENERE en JQUERY LES TEMPLATES HTML (LES ITEMS DE LA LISTE)
+	SUR LE MODELE SUIVANT: 
+	-->
+
+	<!--   
+	  <div class="accordion-item">
+	    <a href="#" class="question btn">
+	      Question1<i class="fa fa-angle-right"></i>
+	    </a>
+	    <p class="answer">Réponse1</p>
+	  </div> 
+
+	  <div class="accordion-item">
+	    <a href="#" class="question btn">
+	      Question2<i class="fa fa-angle-right"></i>
+	    </a>
+	    <p class="answer">Réponse2</p>
+	  </div> 
+
+	  ...
+
+	-->
+	</div>
+
+	<!-- On charge jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+	<!-- Notre code JS-jQuery -->
+	<script>
+		/*
+		 * Générer un dynamiquement en jQuery un menu HTML depuis une variable de type tableau d'objets
+		 * Puis créer un menu accordéon
+		 * Auteur : Frédéric LOSSIGNOL
+		*/
+
+		// Les données : 
+		// 1 tableau d'objets 'faqs'. Cette représentation de données (un tableau d'objets) est très commune.
+		// Ici, chaque objet est un ensemble question/reponse
+
+		var faqs = 
+		[
+			{
+				question: 'Quels sont les modes de livraison proposés, et quels sont les tarifs ?', 
+				answer: '<strong>Livraison standard – 5,95 €</strong> : Votre colis vous sera livré dans les 2 à 4 jours ouvrés suivant la date de la commande (à l\'exclusion des week-ends) Par exemple, si vous passez commande le jeudi avant <span style="color:red;">13h CET</span> , votre commande sera livrée au plus tôt le lundi suivant.'
+			},
+			{
+				question: 'Est-ce que les commandes peuvent être livrées à mon adresse ?', 
+				answer: 'Oui. Le service Click&amp;Collect (livraison en magasin) est disponible dans tous les magasins français UNIQLO. Référez-vous à la signalétique en magasins pour trouver le comptoir de retrait Click&amp;Collect.'
+			},
+			{
+				question: 'Que se passe-t-il si je suis absent lors de la livraison ?', 
+				answer: 'Si vous (ou le destinataire du colis) êtes absent lors du passage de notre transporteur, un avis de passage sera déposé dans votre boîte aux lettres (lorsque cela sera possible), pour vous informer de la prochaine livraison, ou du lieu où votre colis a été déposé. Notez que si vous devez retirer votre colis dans un point de retrait / bureau de poste, il y sera disponible pendant 14 jours calendaires maximum. Passé ce délai, il nous sera renvoyé en vue d\'un remboursement.'
+			},
+			{
+				question: 'Par quel moyen je serais informé(e) de la disponibilité de ma commande ?', 
+				answer: 'Vous serez informé(e) de la disponibilité de votre commande par Email et par SMS.'},
+		  	{
+		  		question: 'Puis-je modifier la date de livraison ?', 
+		  		answer: 'Il n’est pas possible de modifier l’heure ou la date de la livraison Relais Colis.'
+		  	},
+		  	{
+		  		question: 'Comment puis-je renvoyer ma commande ?', 
+		  		answer: 'Pour tout retour de commande, déposez simplement votre commande dans l’un des point-relais Relais Colis, en utilisant le bon de retour fourni, ou rendez-vous dans <a href="https://www.uniqlo.com/on/demandware.store/Sites-FR-Site/fr_FR/Link-Page?cid=Stores_Landing_Page">n\'importe quel magasin Uniqlo</a>.<br>Veuillez noter que les commandes réglées via PayPal ne pourront pas être remboursées en magasin.<br>Un récépissé vous sera alors délivré. Nous vous demandons de bien vouloir conserver ce document jusqu’à obtention de votre remboursement.<br>Veuillez noter que la levée des colis retournés est quotidienne.<br>Vous pouvez suivre l\'évolution de votre retour via le site de Relais Colis (<a href="https://www.relaiscolis.com/">www.relaiscolis.com</a>). Une fois indiqué comme réceptionné, comptez 3 à 4 jours ouvrés pour que votre colis soit réceptionné et traité par nos services.'
+		  	},
+		];
+
+		/*
+		 * D'abord, on crée les éléments item (une question et sa réponse) 
+		 * et on les injecte dans le DOM avec .append()
+		 * 
+		 * En JS, on utilisera plutôt .createElement() et .createTextNode()
+		 * et on injectera le contenu dans un Elt HTML avec elt.appendChild()
+		 * cette méthode présente l'avantage d'être très performante
+		 * notamment en cas d'insertion dans de nombreux éléments
+		*/
+		// On peut utiliser for ou forEach pour parcourir un tableau en JS
+		// foreach est plus simple à écrire, profitons-en...
+		// (https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/forEach)
+		/*
+		faqs.forEach(function(item) {
+			console.log(item);
+			// la méthode forEach, appliquée à un tableau (ici faqs), 
+			// prend un paramètre qui vaut chaque entreé du tableau. 
+			// Nous disposons donc de l'objet item dans la boucle, 
+			// et nous pouvons afficher ses propriétés question et answer
+			
+		  var itemHtml = '<div class="accordion-item"><a href="#" class="question btn">'+item.question+'<i class="fa fa-angle-right"></i></a><p class="answer">'+item.answer+'</p></div>';	
+			$('#accordion-list').append(itemHtml);
+		}); // Fin de la boucle forEach qui génère la structure HTML du menu accordéon
+		*/
+
+
+		for(var i=0; i<faqs.length; i++) {
+			var itemHtml = '<div class="accordion-item"><a href="#" class="question btn">'+faqs[i].question+'<i class="fa fa-angle-right"></i></a><p class="answer">'+faqs[i].answer+'</p></div>';
+		  $('#accordion-list').append(itemHtml);
+		}
+
+		/* 
+		 * On pose un éouteur d'évènement sur CHACUN des liens
+		 * En jQuery, c'est beaucoup plus simple à écrire.
+		 * 
+		 * Sur l'évènement click : on veut déplier ou replier le paragraphe alternativement.
+		*/
+		$('a.question').on('click', function(){
+			// $(this) // renvoie l'Elt a sur sur lequel on a posé l'écouteur d'Evt 
+			// $(this).next(); // renvoie l'Elt frère suivant 
+		  	console.log( $(this) );
+		  	console.log( $(this).next() );
+		  
+			// 1 on cache TOUS les paragraphes qui ne sont pas celui que l'on veut faire apparaître
+			// 2 On selectionne TOUS les a qui ne sont pas $(this)> on leur retire la class active
+		  	// 3 On ajoute/retire la class active au lien que l'utilisateur vient de cliquer
+		  	$('p:visible').not($(this).next()).slideUp();
+		  	$('a').not($(this)).removeClass("active");
+		  	$(this).toggleClass('active');
+		  
+			/* 
+			  	4 Si le lien que l'utilisateur vient de clique a la class active
+			    alors on fait apparaître le paragraphe suivant
+			    SINON on fait cache le paragraphe suivant
+			*/
+
+			if($(this).hasClass("active")) {
+				$(this).next().slideDown();
+			}
+			 else {
+			  	$(this).next().slideUp();
+			}
+		  	
+		});
+
+
+
+</script>
+
+</body>
+</html>

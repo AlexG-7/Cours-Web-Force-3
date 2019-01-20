@@ -1,0 +1,33 @@
+body{
+  background: url(../images/concrete_seamless.png);
+}
+.container {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.hide {
+  display: none;
+}
+button {
+  margin: 0 10px;
+}
+figcaption {
+  text-align: center;
+}
+
+img{
+  margin: 20px;
+  box-shadow: 3px 2px 28px -4px rgba(0,0,0,0.75);
+padding: 20px;
+background: wheat;
+border-radius: 2%;
+transform: rotate(-5deg);
+
+
+}

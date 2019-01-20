@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar> <ion-title> Films </ion-title> </ion-toolbar>
+</ion-header>
+
+<ion-content
+  ><ion-list>
+    <h2>{{ movies.length }} film(s) à l'affiche</h2>
+    <ion-item (click)="showDetail(movie)" *ngFor="let movie of movies">
+      <ion-thumbnail item-start> <img [src]="movie.image" /> </ion-thumbnail>
+      <ion-label
+        ><h2>{{ movie.title }}</h2>
+        <p>{{ movie.genre }}</p>
+        <p *ngFor="let genre of movie.genre">{{genre}}</p>
+        </ion-label>
+    </ion-item>
+  </ion-list></ion-content
+>

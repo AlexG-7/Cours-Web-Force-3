@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+<h1>Cours : interactivité utilisateur</h1>
+<h2>Objectif : Réalisation d'un menu dropDown simple en jQuery</h2>
+
+<div class="dropdown-group">
+  <button id='dropdown-btn' class="btn">
+    Click Me Please !
+  </button>
+  <ul id="dropdown-list">
+    <li><a href="#">Item1</a></li>
+    <li><a href="#">Item2</a></li>
+    <li><a href="#">Item3</a></li>
+  </ul>
+</div>
+
+	<!-- On charge jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+	<!-- Notre code JS-jQuery -->
+	<script>
+		/*
+		 EN SUIVANT LE PATTERN SUIVANT POUR CREER UNE INTERACTION, 
+		 C'EST TRES SIMPLE
+		 1 ON SELECTIONNE LES ELTS HTML DONT NOTRE INTERACTION A BESOIN
+		 2 ON POSE NOS ECOUTEUR D'EVENEMENTS
+		 3 ON CREE NOS FONCTION QUI SERONT APPELEES PAR LES EVENEMENTS
+		*/
+
+		/*********************************
+		 * 1 On selectionne les éléments HTML 
+		 *   et on les stock dans des variables réutilisable plus tard dans notre code5
+		**********************************/
+		var buttonElement = $('button#dropdown-btn');
+		var list = $('ul#dropdown-list');
+
+
+		/********************************
+		 * 3 On déclare les fonctions qui seront appelées lorsqu'un évènement est déclenché
+		 *   Cette fonction affichera ou cachera la liste dropdown quand l'utilisateur cliquera sur le bouton
+		********************************/
+		function showOrHideDropdown() {
+		  if (list.is(':hidden')) {
+		    list.fadeIn(700);
+		  } else {
+		    list.fadeOut(200);
+		  }
+		  // même code avec fadeToggle()
+		  // list.fadeToggle(700);
+		}
+		// Cette fonction cachera la liste dropdown lorsque l'utilisateur clique sur en dehors du bouton
+		function hideDropdown(e) {
+		  console.log(e.target); // l'élément HTML cible qui vient d'être cliqué
+		  console.log($(this)); // l'élément document entier quoiqu'il arrive(l'élt sur lequel on a posé l'écouteur d'evt)
+
+		  // Puisqu'on veut tester que l'utilisateur a cliqué en dehors du bouton 
+		  // e.target est adapté, mais pas $(this)
+		  if (e.target.id != 'dropdown-btn') {
+		    if (list.is(':visible')) {
+		      list.hide();
+		    }
+		  }
+		}
+
+
+		/********************************************
+		 * 2 on pose nos écouteurs d'évènements 
+		 *   sur nos éléments HTML (Le bouton)
+		********************************************/
+		buttonElement.on('click', showOrHideDropdown);
+		$(document).on('click', hideDropdown);
+
+
+		/********************************************
+		 * BONUS : AJUSTER DYNAMIQUEMENT LA LARGEUR DU DROPDOWN SELON LA LARGEUR DU BOUTON
+		 * On récupère la largeur de l'élément bouton
+		********************************************/
+		function setSizeOfDropdownList() {
+		  var buttonWith = buttonElement.width();
+		  console.log(buttonWith);
+		  // On donne la même largeur à l'élément ul#dropdown-list
+		  list.css("width", buttonWith-16);
+		}
+
+		setSizeOfDropdownList();
+
+	</script>
+</body>
+</html>
+

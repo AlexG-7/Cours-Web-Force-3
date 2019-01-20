@@ -1,0 +1,26 @@
+body {
+    margin: 0 auto;
+    width: 50%;
+    font-size: 16px;
+    font-family: Arial
+  }
+  ul {
+    margin-top: 33px;
+    padding-left: 0;
+
+  }
+  ul li  {
+    list-style: none;
+    padding: 11px 1px;
+    border-bottom: 1px solid #ccc;
+  }
+  li button {
+    background: white;
+    border:1px solid #ccc;
+    color: #aaa;
+    margin-right: 11px
+  }
+  li button:hover {
+    color: #111;
+    background-color: #eee;
+  }

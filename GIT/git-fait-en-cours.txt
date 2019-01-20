@@ -1,0 +1,86 @@
+
+Git est le logiciel qui permet de versionning
+
+1/ Créer un compte sur Github 
+Github est un outils qui stocker nos version sur son propres serveurs (Dropbox)
+
+
+2/ Télécharger et installer Github (le logiciel desktop)
+Github Desktop est une interface (il en existent plusieurs) qui permet d'administrer nos projets GITHUB sans passer par les lignes de commandes. 
+
+
+3/ Télécharger et installer GitBash
+GITBASH permet d'administrer nos projets GIT-GITHUB en ligne de commande.
+
+
+Exemple développer en cours : 
+
+
+J'ai créer un nouveau projet sur Gihub, accessible à cette adresse  : https://github.com/yakineEvogue/Boutique
+
+Pour le mettre en ligne grâce à git Bash (clic-droit, gitbash): 
+	<commande>
+	git init
+	git commit -m "first commit"
+	git remote add origin https://github.com/yakineEvogue/Boutique.git
+	git push -u origin master
+
+Pour ajouter ce projet on peut soit le télécharger directement ou récupérer le lien pour cloner directement ligne de commande ou via GITDESKTOP. 
+
+Lien clonage : https://github.com/yakineEvogue/Boutique
+
+
+On va sur HTDOCS pour se préparer à clone le projet. On ouvre Git Bash, et on fait 
+
+	<commande>
+	git clone https://github.com/yakineEvogue/Boutique nom_de_dossier_cible
+	
+	
+Voilà on a récupérer le projet dans le dossier nom_de_dossier_cible
+
+Pour récupérer les changements des collègues, la ligne de commande à exécuter dans le dossier est : 
+
+	<commande>
+	git pull
+	
+Pour pousser des modifications : 
+	1: Il faut être invité à collaborer sur le projet (dans gitHub)
+	2: On fait des modifications dans le projet$
+	3: la commande "git status" permet à tout moment de voir le status des fichiers et notamment les modifs
+	4: La commande "git add ." permet d'ajouter tous nos fichiers
+	5: La commande "git commit m 'message du commit' " permet d'entrer les fichiers directement dans le système. A partir de là le système connait nos fichiers
+
+	6: Avant de pousser nos modifs 'push', on va d'abord récupérer les fichiers des collègues
+	<commande>
+	git pull
+	
+	7: On peut ensuite pousser nos modifs qui seront 
+	<commande>
+	git push
+	
+	
+	Pour résumer et dans l'ordre : 
+	
+	git add .
+	git commit -m 'mon message'
+	git pull
+	git push
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

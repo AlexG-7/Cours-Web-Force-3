@@ -1,0 +1,57 @@
+<script>
+
+// **** Comparaison syntaxique entre le IF et le SWITCH.
+
+
+var age;
+
+age = window.prompt('Quel âge avez-vous ?');
+
+
+if(age == 20 || age == 21)
+{
+    // Code exécuté si age vaut 20 ou 21.
+}
+else if(age == 30)
+{
+    // Code exécuté si age vaut 30.
+}
+else if(age == 40)
+{
+    // Code exécuté si age vaut 40.
+}
+else if(age == 50)
+{
+    // Code exécuté si age vaut 50.
+}
+else
+{
+    // Code exécuté dans tous les autres cas.
+}
+
+
+switch(age)
+{
+    case 20:
+    case 21:    // Deux cases à la suite équivalent à un OU booléen
+    // Code exécuté si age vaut 20 ou 21.
+    break;
+
+    case 30:
+    // Code exécuté si age vaut 30.
+    break;
+
+    case 40:
+    // Code exécuté si age vaut 40.
+    break;
+
+    case 50:
+    // Code exécuté si age vaut 50.
+    break;
+
+    default:
+    // Code exécuté dans tous les autres cas.
+    break;      // Ici le break est optionnel puisqu'on se trouve à la fin du switch
+}
+
+</script>

@@ -1,0 +1,74 @@
+=================================
+UTILISATION (Workflow équipe)
+=================================
+Mise en place d'un Workflow en équipe sous le couple GIT / GITHUB
+- créer un compte sur https://github.com/ ou sur https://bitbucket.org
+Il s'agit de serveurs pour repositories GIT
+
+$ cd /C:/wamp/www/mon_projet ¤ je me positionne sur mon projet (à partir de mon PC local)
+$ git init ¤ initialisation du repo dans le projet
+$ git config --global user.name 'Prenom NOM'
+$ git config --global user.email 'adresse@mail.com'
+
+- Aller sur github.com et créer un nouveau repository
+
+$ git remote add origin https://github.com/utilisateur/votre_projet.git
+$ git add --all
+$ git commit -m 'Première version de mon projet'
+$ git push -u origin master ¤ va demander le login et mdp
+
+- Cliquer sur votre projet github.com > settings > collaborators : ajouter les collaborateurs au projet
+- Les collaborateurs effectuent la commande suivante à partir de leur pc local à lendroit où va être créé le dossier du projet
+
+$ cd /C:/wamp/www ¤ positionnement dans son serveur
+$ git clone https://github.com/utilisateur/projet.git ¤ pour cloner directement le projet, sans faire de git init etc...
+$ git config --global user.name 'Prenom NOM'
+$ git config --global user.email 'adresse@mail.com'
+$ git checkout -b nom_du_travail ¤ il créé sa branche où il va travailler et se positionne dessus en une seule commande 
+
+- Le collaborateur effectue ses modifications après s'être positionné sur sa branche de travail
+$ git add --all && git commit -m 'Ajout d\'une nouvelle fonctionnalité au site'
+$ git add --all && git commit -m 'Modification de la fonctionnalité' ¤ le collaborateur fait ses commits réguliers au cours de son travail
+$ git push origin nom_du_travail ¤ il pousse sa branche dans le repo en ligne
+
+- Il se rend sur github.com et clique sur "compare and pull request" qui est apparu en vert sur la page du projet
+- Il laisse un commentaire et clique sur "create pull request"
+- Un autre collaborateur regarde son travail et clique sur "merge pull request" puis "confirm merge"
+- Il supprime la branche nom_du_travail sur github.com, rubrique "branches"
+
+$ git checkout master
+$ git pull origin master ¤ il recupère son travail
+$ git branch -D nom_du_travail ¤ suppression de la branche en local
+$ git branch nouveau_travail ¤ creation d'une branche pour nouveau travail
+$ git checkout nouveau_travail ¤ et on recommence le process...
+
+- Tous les autres collaborateurs récupèrent le travail effectué par le collaborateur précedent
+$ git pull origin master ¤ recuperation des fichiers modifiés
+
+- les autres collaborateurs recommencent le process : création d'une branche, on se positionne sur la branche, on fait les modifs, on add, on commit, on push, on pull request, on merge, tout le monde pull .....
+
+------- Une fois le projet FINI
+- On se connecte en SSH au serveur distant (celui qui contiendra notre site)
+$ cd /home/web/www ¤ on se positionne dans le dossier vide du site
+$ git clone https://github.com/utilisateur/projet.git ¤ on recupere le projet 
+
+Via un server GIT distant privé, ( non github, mais un git installé en ligne dans un VPS par exemple ) :
+- Les commandes sont les mêmes sauf que nous devons passer par SSH si aucun HTTPS n'est configuré sur le serveur. Exemple : 
+$ git push origin master mot_de_pass_ssh_de_utilisateur ssh://utilisateur@sous.domaine.com:2908/home/chemin/du/projet/git/monprojet ¤ Faire un push de notre client vers notre server
+	- le port 2908 est le port de connexion SSH (à défaut c'est 22)
+$ git pull origin master ssh://ziad@185.22.109.40:2908/home/ziad/clients/.git
+$ git fetch origin master ssh://ziad@185.22.109.40:2908/home/ziad/clients/.git
+$ git remote add origin ssh://ziad@185.22.109.40:2908/home/ziad/clients/.git ¤ pour l'ajouter une bonne fois pour toute et ne plus devoir le ressaisir comme dans les deux commandes precedentes
+
+Pour la gestion de conflit :
+- celle ci est constatée sur github.com quand l'utilisateur va tenter de faire un merge. Alors il faut :
+$ git pull origin master ¤ à partir de sa branche locale sur laquelle il travaillait 
+: à ce moment là le conflit se retrouve en local.
+$ git diff --name-only --diff-filter=U ¤ permet de dire quels sont les fichiers en conflit 
+: là il solutionne son conflit. 
+$ git add et git commit ¤ comme d'habitude 
+$ git push origin sa_branche ¤ il remet sa branche en ligne 
+: il fait son merge en ligne normalement 
+$ git checkout master ¤ se positionne sur master
+$ git pull origin master ¤ il pull sur Master pour reprendre son travail 
+$ git branch -D sa_branche ¤ il supprime sa branche

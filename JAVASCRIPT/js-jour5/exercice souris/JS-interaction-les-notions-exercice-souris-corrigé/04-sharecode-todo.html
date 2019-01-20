@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <style>
+        .danger
+        {
+            font-size: 1.25em;
+            font-weight: bold;
+        }
+        .important
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemple de modification de la classe CSS d'une balise avec la propriété className</h1>
+
+    <h2 class="danger">Ceci est un sous-titre</h2>
+
+    <p id="text">Ceci est un texte important.</p>
+
+    <script>
+        var paragraph;
+
+        /*
+         * Recherche dans l'arbre DOM d'une balise ayant l'id spécifié.
+         *
+         *
+         * document.getElementById() renvoie un objet DOM manipulable
+         * en JavaScript correspondant à la balise trouvée.
+         *
+         * Sinon la méthode renvoie la valeur spéciale null.
+         */
+        paragraph = document.getElementById('text');
+
+        /*
+         * Modification de l'attribut HTML class de la balise trouvée.
+         * Après l'exécution de ce code, c'est comme si ligne 16 on avait écrit :
+         *
+         * <p id="text" class="important">Ceci est un texte important</p>
+         */
+        paragraph.className = 'important';
+
+
+        /*
+         * TODO:
+         * Ajouter la classe 'important' à la balise <h2>, sans supprimer la classe 'danger'.
+         */
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Exemple de recherche dans le DOM avec document.querySelectorAll()</h1>
+
+    <p class="important">!! LE TEXTE ICI VA DISPARAITRE !!</p>
+    <p class="important">!! LE TEXTE ICI VA DISPARAITRE !!</p>
+    <p class="important">!! LE TEXTE ICI VA DISPARAITRE !!</p>
+
+    <ol id="counter">
+        <li>!! LE TEXTE ICI VA DISPARAITRE !!</li>
+        <li>!! LE TEXTE ICI VA DISPARAITRE !!</li>
+        <li>!! LE TEXTE ICI VA DISPARAITRE !!</li>
+        <li>!! LE TEXTE ICI VA DISPARAITRE !!</li>
+        <li>!! LE TEXTE ICI VA DISPARAITRE !!</li>
+        <li>!! LE TEXTE ICI VA DISPARAITRE !!</li>
+    </ol>
+
+    <ol>
+        <li>0</li>
+        <li>10</li>
+        <li>20</li>
+        <li>30</li>
+        <li>40</li>
+        <li>50</li>
+    </ol>
+
+    <script>
+        var index;
+        var paragraphs;
+
+        /*
+         * Recherche dans l'arbre DOM en utilisant un sélecteur CSS.
+         *
+         *
+         * document.querySelectorAll() renvoie un tableau avec autant
+         * d'objets DOM manipulables en JavaScript que de balises trouvées.
+         *
+         * Sinon la méthode renvoie un tableau vide.
+         */
+        paragraphs = document.querySelectorAll('.important');
+
+        // Modification du contenu à l'intérieur des balises trouvées.
+        for(index = 0; index < paragraphs.length; index++)
+        {
+            paragraphs[index].textContent = 'Bonjour numéro ' + index + ' !!';
+        }
+
+
+        /*
+         * TODO:
+         * Créer une variable listItems représentant toutes les balises <li> de la liste ayant pour id 'counter'.
+         * Ecrire en gras les même valeurs que dans la liste du dessous. (Utilisez innerHTML pour insérer du texte et des balises HTML)
+         */
+    </script>
+</body>
+</html>

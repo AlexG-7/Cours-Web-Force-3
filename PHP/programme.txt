@@ -1,0 +1,17 @@
+	-> bases.php
+	-> get/
+		page1.php
+		page2.php
+	-> post/
+		formulaire1.php
+		formulaire2.php
+		formulaire3.php
+		formulaire4.php
+	-> corrections Eval1 (1h)
+	-> cookies/ (45min)
+	-> session/  (45min)
+	-> requetes/(PDO) (1h30)
+	-> exemple_bootstrap (20m) + Securité (45m) + commentaire (1h30)
+	-> PDO avancé/ (1h30)
+	-> Site (4 jours)/
+	

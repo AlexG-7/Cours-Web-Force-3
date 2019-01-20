@@ -1,0 +1,7 @@
+<p><strong>Favoris</strong></p>
+<hr>
+<div class="list-group">
+    <a (click)="showDetails($event, fav)" *ngFor="let fav of favs" href="#" class="list-group-item d-flex justify-content-between align-items-center">
+      {{fav.name.first | firstletter }} <i class="fas fa-angle-right"></i>
+    </a>   
+</div>

@@ -1,0 +1,110 @@
+<!-- **************** HEADER ****************-->
+<ion-header *ngIf="movie">
+
+  <!-- navigation -->
+  <ion-toolbar color="tertiary">
+    <ion-buttons  slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{movie.title}}</ion-title>
+  </ion-toolbar>
+
+  <!-- segments -->
+  <ion-toolbar>
+  <ion-segment color="dark" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="infos" checked>Infos</ion-segment-button>
+      <ion-segment-button value="avis">Avis</ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+</ion-header>
+
+<!-- ************* CONTENT ********************* -->
+<ion-content padding *ngIf="movie">
+
+  <!-- TEMPLATE INFOS -->
+  <ion-card *ngIf="segmentName == 'infos'">
+    <ion-img [src]="movie.image"></ion-img>
+  
+    <ion-button margin (click)="seeTrailer()"
+                color="dark" 
+                expand="full"
+                shape="round"
+                outline>
+                voir la bande-annonce
+    </ion-button>
+
+    <p text-center *ngIf="movie.comments.length>0"><strong>SCORE : {{printScore(movie.comments)}}</strong></p>
+
+    <ion-card-header>
+        <ion-card-title>{{movie.title}} <br> {{printDuration(movie.duration)}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p margin class="resume"><strong><u>Résumé</u> : </strong>{{movie.resume}}</p>
+      <hr>
+      
+      <p margin class="genre">
+        <strong><u>Genres</u> : </strong>
+        <span *ngFor="let genre of movie.genre">{{genre}} - </span>
+      </p>
+
+      <p margin class="actors">
+        <strong><u>Acteurs</u> : </strong>
+        <span *ngFor="let actor of movie.actors">{{actor}} - </span>
+      </p>
+
+      <hr>
+      
+      <ion-button margin (click)="changeSegmentName('avis')"
+      color="warning"
+      expand="full"
+      shape="round"
+      oultine>
+      Voir les avis
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+  <!-- FIN TEMPLATE INFOS -->
+
+
+  <!-- TEMPLATE AVIS -->
+  <div *ngIf="segmentName== 'avis'">
+
+    <!-- SI PAS D'AVIS DANS LE ARRAY-->
+    <div *ngIf="movie.comments.length==0">
+      <p text-center>Il n'y a pas encore d'avis sur ce film</p>
+      <ion-button margin (click)="addComment()" 
+      color="warning"
+      expand="full"
+      shape="round"
+      oultine>Déposer un avis</ion-button>
+    </div>
+
+    <!-- SI IL Y A DES AVIS-->
+    <ion-list *ngIf="movie.comments.length>0">
+      <ion-item  *ngFor="let comment of movie.comments; let i = index">
+        <ion-avatar slot="start">
+          <img [src]="avatars[i]">
+        </ion-avatar>
+        <ion-label text-wrap>
+          <h2>{{comment.name}}</h2>
+          <h3>{{comment.score}} / 5</h3>
+          <p>{{comment.comment}}</p>
+          <p color="primary"><small>le {{comment.date | date:'dd/MM/yyyy'}}</small></p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    
+    <!-- Action Button -->
+    <ion-fab  *ngIf="movie.comments.length>0" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button margin (click)="addComment()" color="warning">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+  </div>
+  <!-- FIN TEMPLATE AVIS -->
+
+</ion-content>

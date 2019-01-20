@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- en-tête du document -->
+  <title>Formulaire</title>
+  <meta name="description" content="Formulaire HTML/CSS" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <!-- corps du document -->
+  <header>
+    <!-- zone du haut, ex : bannières, logos, solgans ... -->
+    <h1>Mon premier site en HTML/CSS</h1>
+  </header>
+  <section class="menus">
+    <nav>
+      <ul>
+        <li><a href="index.html">Structure</a></li>
+        <li><a href="texte.html">Texte</a></li>
+        <li><a href="selecteurs.html">Selecteurs</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li><a href="position.html">Position</a></li>
+        <li><a href="tableau.html">Tableaux</a></li>
+        <li><a href="listes.html">Listes</a></li>
+        <li><a href="lien&menu.html">Lien et Menu</a></li>
+        <li><a href="formulaire.html">Formulaire</a></li>
+        <li><a href="Multimédia.html">Multimédia</a></li>
+        <li><a href="Animation.html">Animation</a></li>
+      </ul>
+    </nav>
+  </section>
+  <main>
+    <h2>Formulaire</h2>
+    <form method="post" action="url de destination" enctype="multipart/form-data">
+      <label for="pseudo">Pseudo *</label>
+      <input type="texte" name="pseudo" id="pseudo" placeholder="Pseudo..." required />
+
+      <label for="mdp">Mot de passe</label>
+      <input type="password" name="mdp" id="mdp" />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" value="@" />
+
+      <label for="file">CV</label>
+      <input type="file" name="file" id="file" accept=".jpg, .jpeg, .png" multiple />
+
+      <p>
+        <label for="orange">Orange</label>
+        <input type="checkbox" id="orange" name="choix" value="orange" checked />
+
+        <label for="jaune">Jaune</label>
+        <input type="checkbox" id="jaune" name="choix" value="jaune" />
+
+        <label for="bleu">Bleu</label>
+        <input type="checkbox" id="bleu" name="choix" value="bleu" />
+      </p>
+
+      <p>
+        <label for="homme">Homme</label>
+        <input type="radio" id="homme" name="choix" value="homme" checked />
+
+        <label for="femme">Femme</label>
+        <input type="radio" id="femme" name="choix" value="femme" />
+
+        <label for="autre">Autre</label>
+        <input type="radio" id="autre" name="choix" value="autre" />
+      </p>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+
+      <input type="submit" name="inscription" value="Envoyer" />
+    </form>
+  </main>
+
+  <footer>
+    <!--
+        zone du bas, ex : liens administratifs, mentions légales, plan du site, CGU, CGV, contact, Copyright ...
+      -->
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.created-at {
+    position: absolute;
+    right: 25px;
+    opacity: 0.7;
+}
+.favourite {
+    position: absolute;
+    right: 11px;
+    opacity: 0.7;
+}
+.list-group-item button i {
+    padding: 11px 7px;
+}
+.list-group-item {
+    transition: 0.15s;
+}
+.list-group-item:first-child {
+    border-radius: 0
+}
+.list-group-item:hover {
+    cursor: pointer;
+    transform: scale(1.007);
+    font-weight: bold
+}
+.input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
+    border-radius: 0
+}
+img {
+    margin-right: 15px
+}
+.women {
+    border-color: rgb(206, 156, 211);
+    background: rgb(228, 200, 231);
+}
+.favourites {
+    background: rgb(235, 232, 232);
+}

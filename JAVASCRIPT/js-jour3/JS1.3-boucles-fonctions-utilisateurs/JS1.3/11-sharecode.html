@@ -1,0 +1,71 @@
+<script>
+
+// **** Syntaxe d'une fonction standard.
+
+
+/*
+ * Lorsque le code devient trop long et répétitif il est possible de
+ * l'organiser en petites unités que l'on appelle des fonctions, qui
+ * vont s'occuper d'une tâche précise ou de réaliser un calcul.
+ */
+function direBonjour()
+{
+    document.write('<p>Bonjour à toutes et à tous !</p>');
+}
+
+
+// (...)
+
+// Appel de la fonction.
+direBonjour();
+
+</script>
+
+
+
+<script>
+
+// **** Syntaxe d'une fonction avec des arguments.
+
+
+/*
+ * Pour communiquer avec l'extérieur une fonction peut éventuellement
+ * avoir des arguments en entrée...
+ */
+function direBonjour(prenom, nom)
+{
+    document.write('<p>Bonjour ' + prenom + ' ' + nom + ' !</p>');
+}
+
+
+// (...)
+
+// Appel de la fonction en indiquant autant de paramètres que la fonction possède.
+direBonjour('Marie', 'MAYERS');
+
+</script>
+
+
+
+<script>
+
+// **** Syntaxe d'une fonction renvoyant une valeur.
+
+
+// Une fonction peut aussi renvoyer une valeur en sortie.
+function direBonjour()
+{
+    return '<p>Bonjour à toutes et à tous !</p>';
+}
+
+
+// (...)
+
+// Déclaration d'une variable.
+var message;
+
+// Appel de la fonction et récupération de la valeur renvoyée dans une variable intermédiaire.
+message = direBonjour();
+document.write(message);
+
+</script>

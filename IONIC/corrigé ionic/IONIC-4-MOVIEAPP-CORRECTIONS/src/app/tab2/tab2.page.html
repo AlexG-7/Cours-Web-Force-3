@@ -1,0 +1,27 @@
+<ion-header >
+  <ion-toolbar color="tertiary">
+    <ion-searchbar mode="ios" animated #mySearchbar (keyup)="0" placeholder="film, acteur, genre..."></ion-searchbar>
+  </ion-toolbar>
+  <!-- <ion-title>
+      {{movies.length}} Films
+  </ion-title> -->
+  
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="movies">
+
+    <ion-item (click)="showDetail(movie)"
+               *ngFor="let movie of movies | filtermovie:mySearchbar.value">
+      <ion-thumbnail slot="start">
+        <img [src]="movie.image">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{movie.title}}</h2>
+        <p *ngFor="let genre of movie.genre">{{genre}}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

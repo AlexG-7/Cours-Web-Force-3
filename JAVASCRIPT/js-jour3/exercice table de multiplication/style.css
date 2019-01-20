@@ -1,0 +1,17 @@
+td {
+  background: rgb(182, 47, 223);
+  text-align: center;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+table {
+  border: 3px solid #6495ed;
+  width: 100vh;
+  height: 90vh;
+  margin:0 auto;
+}
+.memeCase{
+    background: chocolate;
+}
+

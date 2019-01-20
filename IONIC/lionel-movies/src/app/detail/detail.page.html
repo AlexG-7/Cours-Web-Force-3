@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Titre : {{ movie.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-card>
+    <img [src]="movie.image" />
+    <div>
+      <p>acteurs: {{ movie.actors }}</p>
+      <p>direction: {{ movie.director }}</p>
+      <p>date : {{ movie.date }}</p>
+      <video
+        width="100%"
+        controls="controls"
+        preload="metadata"
+        class="videoPlayer"
+      >
+        <source [src]="movie.traileryt" type="video/mp4" />
+      </video>
+    </div>
+    <div class="card-title"><p>titre :{{ movie.title }}</p> </div>
+    <div class="card-subtitle"><p>résumé: {{ movie.resume }}</p> </div>
+  </ion-card>
+</ion-content>

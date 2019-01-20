@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  background: #EBF4FB;
+  font-family: arial
+}
+.red {
+  color : #ff0000 !important;
+}
+textarea {
+  border: 2px solid #D9E3F9;
+  border-radius: 4px;
+  padding: 8px 14px;
+}
+h1 {
+  color: #1da1f2;
+    font-size: 33px;
+    font-weight: 300;
+    line-height: 33px;
+    margin-bottom: 11px;
+}
+p#counterBlock {
+  color: #456; 
+  font-size: 37px;
+  font-weight: bold;
+  margin-top:7px
+}

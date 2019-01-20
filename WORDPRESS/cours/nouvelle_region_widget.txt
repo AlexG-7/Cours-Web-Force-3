@@ -1,0 +1,23 @@
+---------------
+1ere ETAPE
+---------------
+
+Ouvrir le fichier wp-content/themes/montheme/functions.php et inserer le code suivant en bas de page:
+
+register_sidebar( array(
+			'name'          => 'ma nouvelle region',
+			'id'            => 'ma-nouvelle-region',
+			'description'   => 'Description de ma nouvelle region',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h1 class="widget-title">',
+			'after_title'   => '</h1>',
+			) );
+
+---------------
+2nde ETAPE
+---------------
+Dans le fichier de destinations
+(exemple wp-content/themes/montheme/footer.php)
+
+<?php dynamic_sidebar( 'ma-nouvelle-region' ); ?>

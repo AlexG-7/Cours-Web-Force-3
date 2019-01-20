@@ -1,0 +1,89 @@
+==================================================================================
+APPRENTISSAGE ( doc de GIT : https://git-scm.com/doc )
+Liens divers : 
+http://www.wei-wang.com/ExplainGitWithD3/
+==================================================================================
+INSTALLATION SOUS LINUX :
+--------------------------------------------------------
+$ sudo add-apt-repository ppa:git-core/ppa ¤ ajout du PPA officiel
+$ sudo apt-get update 
+$ sudo apt-get install git
+$ git --version ¤ pour constater la version installée
+--------------------------------------------------------
+
+$ git config --global user.email 'siteweb.jb@gmail.com' ¤ pour s'identifier avec son email
+$ git config --global user.name 'Ziad' ¤ pour s'identifier avec son nom (complémentaire de l'email)
+$ git init ¤ permet de créer un repository dans le working directory
+$ git init --bare ¤ permet de créer un repository "nu", sans working directory ( voir comprehension pour la différence avec le git init )
+$ git clone dossier_source_qui_contient_le_repo_a_cloner dossier_cible ¤ permet de cloner un repository avec tous les fichiers sources du working directory
+$ git clone --bare dossier_source_qui_contient_le_repo_a_cloner dossier_cible ¤ fait un clone avec le repo sans les fichiers source ( un clone bare )
+$ git status ¤ permet de voir quelles modifications ont été effectuées sur les fichiers de l'application
+-- pour ignorer des fichiers ou dossiers : 
+- aller dans .git/info/exclude et décommenter *.[oa]
+- créer un fichier .gitignore à côté du dossier .git et (exemples) :
+	écrire "cache/" si on souhaite ignorer le dossier "cache"
+		   "cache.php" si on souhaite ignorer le fichier cache.php
+-- ATTENTION : s'assurer que les dossiers ou fichiers que l'on desire ignorer n'ont pas été add dans le staging area 
+-- S'ils ont déjà été add, faire :
+$ git reset nom_du_dossier_a_sortir OU nom/du/fichier_a.sortir
+$ git reset ¤ cette commande permet de sortir tous les fichiers du staging area (annule le add)
+git rm --cached fichier ¤ si on a commit des fichiers et qu'on souhaite 
+-- ATTENTION pour les anciennes version de GIT : seul git rm --cached * fonctionne AVANT le 1er commit. Après le 1er commit , reset fonctionne normalement
+-- DONC exemple : si nous voulons annuler un git add de plusieurs fichiers dans une ancienne version, avant 1er commit , 
+	nous créeons d'abord un git add un_seul.fichier, 
+	nous le commitons PUIS là nous pouvons faire un git add --all avec la possibilité de reset le git add --all Sans cela nous ne pourrions pas reset tous les fichiers
+$ git reset *.php ¤ je desire sortir tous les fichiers php du staging area ATTENTION : tester '*.php' (avec quotes) et *.php (sans quotes) si ça ne fonctionne pas
+$ git checkout ¤ cette commande seule permet de voir quels sont les dossiers precedemment enregistrés et présent dans le untracked, équivaut à faire un git status
+$ git checkout * ¤ permet d'annuler les dernières MODIFICATIONS faites sur tous les fichiers. Et revenir à l'état des fichiers au dernier commit Ceci fonctionne sur les fichiers MODIFIÉS, les fichiers créés ne sont pas supprimés, il faut les supprimer à la main ou faire un clean -df
+$ git checkout *.php ¤ pareil pour tous les fichiers php ATTENTION : tester '*.php' (avec quotes) et *.php (sans quotes) si ça ne fonctionne pas
+$ git checkout fichier/a/annu.ler ¤ pareil pour annuler la modif sur un fichier précisément 
+- un fichier dit "untracked" est un nouveau fichier qui vient d'être créé et dont GIT n'avait pas connaissance auparavant.
+  pour dire à GIT qu'il faut suivre ce fichier, il faut faire ¤ git add nom_du_fichier ¤ il se retrouve alors dans le staging area
+$ git add nom_du_fich.ier ¤ pour ajouter un nouveau fichier dans le staging area , un fichier "untracked" vu par git status
+$ git add * ¤ pour ajouter tous les fichiers modifiés et créés
+$ git add nom_du_dossier ¤ pour ajouter tous les fichiers modifiés et créés
+$ git add --all ¤ pour ajouter tous les fichiers modifiés, créés et supprimés
+$ git commit -m 'message de la version commitée' ¤ permet d'appliquer les fichiers added avec un message d'infos
+$ git commit -a -m 'nouveau commit' ¤ permet de faire un add + un commit en une seule commande A CONDITION qu'il n'y ai pas de nouveau fichier créé, mais que des fichiers modifiés
+$ git commit --amend -m 'modifier dernier message de commit' ¤ permet de modifier le message du dernier commit
+$ git reset HEAD^ ¤ permet de supprimer le dernier commit et revenir à l'état avant celui-ci ( sans restaurer le working directory Pour restaurer le working directory voir reset --hard )
+$ git reset HEAD^^ ¤ permet de supprimer le dernier et avant dernier commit et revenir à l'état avant celui-ci ( sans restaurer le working directory Pour restaurer le working directory voir reset --hard )
+$ git reset HEAD^^^ ¤ permet de supprimer le dernier et avant dernier et avant avant dernier commit et revenir à l'état avant celui-ci. etc.. (un ^ = un commit)
+-- INFO IMPORTANTE : Une fois revenu à l'état de commit désiré via la commande reset HEAD^^ , on fait un checkout * pour retirer toutes les modifs du working directory Et on supprime les fichiers considérés comme nouveaux avec clean -df . Ainsi on aura rétabli le working directory à l'état désiré. En faisant un reset --hard HEAD^^ cela restaure les fichiers supprimés du working directory et annule les modifs des fichiers modifiés. Mais ne supprime pas les fichiers créés, donc faire un clean -df derrière.
+$ git clean -df ¤ permet de supprimer les dossiers et fichiers considérés nouveaux (à faire après un checkout ou un reset --hard qui annule les modifs et suppressions)
+$ git checkout nom_du_fichier_supprimé ¤ permet de restaurer un fichier supprimé AVANT commit (on le voit dans le git status en mode deleted)
+$ git log ¤ pour voir l'historique de ce qui a été commited dans le repository
+$ git reflog ¤ pour voir l'historique de ce qui a été fait avec la référence pour pouvoir y aller
+$ git reset HEAD@{6} ¤ je me rend à la version qui correspond à HEAD@{6} dans le reflog
+-- INFO IMPORTANTE : en me rendant sur la version, les fichiers du working directory ne sont pas restaurés, ils aparaissent dans le staging area quand on fait un git status et donc il faut faire un checkout * pour restaurer les modifs à la version correspondante et checkout chaque_fichier_supprimé pr les restaurer et clean -df pour supprimer les fichiers et dossiers ajoutés. Voir git reset --hard pour restaurer les modifs et suppression d'un coup mais les fichiers créés devront être supprimés avec clean -df
+$ git reset --hard HEAD@{6} ¤ je me rend à la version qui correspond à HEAD@{6} dans le reflog ET je restaure les fichiers du working directory comme ils étaient dans HEAD@{6} (càd, en supprimant ce qui a été ajouté, en restaurant ce qui a été supprimé et en annulant ce qui a été modifié)
+$ git diff ¤ après un git status , si des fichiers ont été modifiés, git diff permet de voir quels sont les modifications qui ont été efectuées
+- après avoir regardé la différence , pour quitter l'editeur il faut taper ":q"
+$ git diff nom_du_fichier_ou_du_dossier_specifique ¤ pour oi la diff sur un seul fichier ou dossier 
+$ git branch ¤ avoir la liste des branches
+$ git branch nom_de_la_branche ¤ nous créons une branche parallèle, pour ne pas altérer le travail fait sur la branche master
+$ git checkout nom_de_la_branche ¤ nous nous positionnons sur la branche créée, pour pouvoir travailler
+$ git checkout -b nouvelle_branche ¤ je crée et me positionne sur nouvelle_branche (racourci de branch nom_branche + checkout nom_branche)
+$ git checkout master ¤ en revenant sur la branche master, tout le travail fait sur la branche "nom_de_la_branche" est annulé 
+$ git checkout nom_de_la_branche ¤ en revenant sur la branche nom_de_la_branche, tout le travail fait sur la branche "nom_de_la_branche" est rétabli 
+$ git diff nom_de_la_branche..master ¤ permet de voir la différence entre ces deux branches
+$ git fetch . nom_de_la_branche:master ¤ permet de faire en sorte que master devienne une copie de nom_de_la_branche Ainsi en faisant un checkout sur master on retrouve le travail fait sur nom_de_la_branche et on peut supprimer nom_de_la_branche
+$ git branch -d nom_de_la_branche ¤ permet de supprimer une branche, -D permet de forcer la suppression d'une branche qui contient des fichiers untracked
+$ git merge nom_de_la_branche ¤ en se positionnant sur master , on merge (fusionne) le travail de nom_de_la_branche, cela produit un commit automatique sur master avec les modifs de nom_de_la_branche
+$ git remote add origin https://github.com/try-git/try_git.git ¤ lier un repository local à un repository en ligne (origin est le nom donné au repository en ligne, si nous en avons plusieurs, nous pouvons les nommer differemment (git remote add secondaire etc...)).
+$ git remote add origin ssh://ziad@185.22.109.40:2908/home/ziad/clients/.git ¤ ajout d'un serveur git distant perso. 2908 est le port du serveur, à défaut c'est 22 si l'on indique rien
+$ git remote rm origin ¤ permet de supprimer le lien au repository en ligne (à faire si on a fait une erreur dans la saisie de l'url au moment du git remote add origin..)
+$ git remote -v ¤ permet de voir si on a bien bindé notre remote repository 
+$ git push -u origin master ¤ cela va pousser la branche master local sur la branche master en ligne et mettre à jour les fichiers qui sont en lignes (demande du login et mot de passe de github.com)
+$ git fetch origin master ¤ permet de rappatrier le remote repository SANS prendre les fichiers
+$ git pull origin master ¤ permet de rappatrier le remote repository AVEC les fichiers (tous les fichiers la 1ere fois, ensuite ça prendra que les modifs des fichiers)
+$ git config user.name ¤ permet de show l'username
+$ git config user.email ¤ permet de show l'user email
+$ git branch -a ¤ permet de voir les branches locales ET les branches remote 
+$ git remote update origin ¤ permet de mettre à jour le repo à partir de origin
+$ git remote show origin ¤ permet de voir toutes les branches et les infos du repo origin en les comparant avec le repo local ( info si up to date ou out of date cela sera indiqué )
+$ git remote prune origin ¤ lorsque des branches ont été supprimé de origin mais qu'elles sont toujours visibiles au niveau local dans remotes/origin/ ( lorsqu'on fait un git branch -a ). prune permet de supprimer l'historique de ces branches en local ( les supprimer de remotes/origin/ ).
+$ git rev-parse HEAD ¤ permet d'avoir le SHA-1 du current commit 
+
+INFOS :
+- Si vous avez une disparition du signe "$", appuyer sur CTRL + C pour quitter ce mode (possibilité qu'il faille appuyer plusieur fois)

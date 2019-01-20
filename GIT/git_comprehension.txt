@@ -1,0 +1,56 @@
+==================================================================================
+COMPREHENSION
+==================================================================================
+Vocabulaire :
+	shell = console de commande linux
+	repository = dossier .git qui contient toutes les infos de l'application
+	staging area = stage = index = l'endroit où se trouvent les fichiers, après avoir éxecuté la commande git add (écrits en vert quand on fait un git status)
+	working directory = working tree = l'endroit où se trouvent, physiquement, les fichiers de notre application
+	merger = fusionner une branch sur laquelle on travaille avec une autre branche . Je merge ma branche "panier" sur la branche "master"
+	master = nom de la branche principale
+	head = dans le repository , endroit où se trouvent les fichiers après un commit
+	fork = forker un projet / repository sur github veut dire copier ce projet / repository
+	commiter = créer une version 
+
+
+Dabord, s'identifier en créant un compte avec son nom et adresse email.
+Ensuite, créer ce qu'on appel un "repository", c'est un fichier nommé .git que GIT va créer et qui servira à stocker toutes les informations relatives aux modifications effectuées sur le site (versions, sauvegardes, historiques..).
+
+Nous effectuons les modifications que nous voulons sur nos fichiers, ensuite via "git status" on regarde ce qui a été modifié.
+On demande d'ajouter les fichiers modifiés dans le staging area , aussi nommé le index autrement dit, les fichiers à prendre en compte. Puis, nous les "commitons" (insérons) dans notre repository.
+Si on souhaite ignorer un dossier ou un fichier il faut créer un fichier ".gitignore" à côté du dossier ".git" (dans le projet) puis on y écrit les fichiers ou dossiers à ignorer
+Avec GIT nous travaillons sur la branche master, c'est une branche qui va surveiller toutes les modifs des fichiers de notre application. 
+Si on veut faire un essai, ou ajouter une fonctionnalité à notre application, nous créons une "branche parallèle", qui va servir à faire nos tests au cas où on fait n'importe quoi.
+Nous nous positionnons sur cette branche pour pouvoir y travailler.
+Si notre fonctionnalité est concluante, on fusionne le travail fait sur la branche parallèle vers la branche master (qui est la branche d'origine), ceci s'appelle un "merge". Si le travail ne nous satisfait pas, on revient sur la branche master sans faire de fusion. En se positionnant sur la branche master, tous les fichiers seront rétablis avant intervention.
+Si l'on se repositionne sur la branche parallèle, tous les fichiers seront rétablis après intervention (c'est comme si on faisait un gros CTRL+Z, CTRL+Y).
+-- Pour schematiser : www.wei-wang.com/ExplainGitWithD3
+On peut aussi faire une copie de la branche sur laquelle on travail vers la branche master, ceci s'appelle un "fetch".
+Github est un hebergeur de repositories pour GIT. La manière de bosser est qu'il faut faire un repository local et le pusher (pousser) sur un repository en ligne (remote repository)
+
+Workflow d'un travail en équipe :
+On créé son projet en local, on initialise un repository GIT en local, on ajoute les fichiers de son son projet (git add --all), on créé un repository GIT en ligne (sur github.com), on lie le repository local au repository en ligne (git remote add origin https://github.com/utilisateur/projet.git), on push son projet local vers le repository en ligne (git push origin master).
+
+Ensuite, en local, on créé une branche (git branch nom_de_la_branche), on se positionne sur celle-ci (git checkout nom_de_la_branche), on fait ses modifs de fichier (travail sur sublime text..), on ajoute ses modifications dans le repo local et on commit (git add git commit). On push sa branche sur le repo en ligne (git push origin nom_de_sa_branche). On se rend sur github.com et on demande une pull request (compare and pull request), pour faire cette demande on clic sur pull request et on laisse un commentaire, eventuellement en donnant le nom de la personne dont on desire la vérification de notre code, puis on clique sur "create pull request".
+
+Ensuite, une autre personne (celle citée précedemment, ou pas...) vérifie notre code et clic sur "merge and confirm pull request".
+Enfin, on supprimme la branche en ligne (nom_de_la_branche), on supprime la branche en local (git branch -D nom_de_la_branche). 
+
+Et les autres membres de l'équipe récupèrent notre travail : ils doivent se positionner sur leur branche master (git checkout master) et faire un git pull origin master.
+
+Y'a plus qu'à recommencer le process à partir de la création d'une nouvelle branche, pour un nouveau travail...
+
+Les push se font généralement en fin de journée, et les pull / merge se font le matin en arrivant. Il ne faut jamais push master directement sauf si on sait ce qu'on fait.
+
+En cas de conflit lors d'un merge (travail sur le même fichier par 2 personnes différentes en même temps) :
+On revient en local, (à partir de la branche avec laquelle on a tenté le merge), on fai un git pull origin master, on corrige le conflit. On git push la_branche, et maintenan le merge devrait passer.
+Puis toute l'équipe peut faire un git pull origin master, et reprendre le processus normal.
+
+INFOS : Lorsqu'une nouvelle personne arrive dans le porjet et qu'elle n'a pas de repository initial, elle doit faire un git clone https://domain.com/le_projet.git
+Cette commande va créer un dossier avec tous les fichiers du projet.
+
+Différence entre un bare repository et un repository via init :
+- Le repository via init est le repository "normal", il contient les fichiers sources de l'application ( working directory ) et les historiques des commit etc... 
+- Le bare repository est ce qu'on appel un repository "nu", il ne contient que les historiques des commit et la config, messages etc.. (soit le journal de l'application) sans les fichiers sources, sans le working directory .
+Nous utilisons le bare repository pour partager le journal tandis que nous utilisons le repository pour partager les fichiers sources ET le journal.
+Typiquement, le bare repository va être stocké dans un serveur en ligne type github, ainsi lorsqu'on a fait nos modifs en local (repository normal avec working directory en local), nous pushons notre commit (qui contient le journal des modifs) dans le bare repository distant ( remote bare repository ) 

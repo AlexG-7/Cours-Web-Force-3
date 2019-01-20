@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Exemple de recherche dans le DOM avec document.getElementById()</h1>
+
+    <p id="contents">!! LE TEXTE ICI VA ETRE REMPLACE AVEC textContent</p>
+
+    <script>
+        var paragraph;
+
+        /*
+         * Recherche dans l'arbre DOM d'une balise ayant l'id spécifié.
+         *
+         *
+         * document.getElementById() renvoie un objet DOM manipulable
+         * en JavaScript correspondant à la balise trouvée.
+         *
+         * Sinon la méthode renvoie la valeur spéciale null.
+         */
+        paragraph = document.getElementById('contents');
+        console.log( paragraph);
+
+        // Modification du contenu à l'intérieur de la balise trouvée.
+        paragraph.textContent = 'Bonjour tout le monde !!';
+
+        /*
+         * En utilisant la propriété .innerHTML à la place de .textContent
+         * on peut générer du HTML à l'intérieur de la balise trouvée.
+         *
+         * Cela signifie qu'on ajoute dynamiquement de nouveaux éléments à
+         * l'arbre DOM !
+         *
+         *
+         * Etant donné cette fonctionnalité supplémentaire, .innerHTML est
+         * plus puissant mais aussi beaucoup plus lent que .textContent.
+         *
+         * A utiliser donc uniquement quand on veut vraiment écrire
+         * dynamiquement du HTML.
+         */
+
+
+        /*
+         * TODO:
+         * Ecrire du HTML dans la chaîne donnée à la propriété .textContent
+         * Que se passe-t'il ?
+         */
+    </script>
+</body>
+</html>

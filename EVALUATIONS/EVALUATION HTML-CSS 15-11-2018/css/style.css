@@ -1,0 +1,311 @@
+/****************************RESET MEYER***********************************/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*****************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+/*********************************************************************************/
+body {
+  background: rgb(17, 17, 17);
+}
+
+.container {
+  margin: 0 200px;
+  background: rgb(17, 17, 17);
+}
+
+header {
+  background: rgb(241, 240, 241);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.logoSlogan {
+  background: rgb(241, 240, 241);
+  padding: 20px;
+}
+
+.comptePanier li {
+  display: flex;
+}
+
+.slogan {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.slogan span {
+  color: goldenrod;
+}
+
+.lobby ul {
+  display: flex;
+}
+
+main {
+  background: rgb(34, 33, 33);
+  margin: 0 auto;
+}
+
+.slideshow {
+  text-align: center;
+}
+
+.slideshow img {
+  width: 1262px;
+  height: 337px;
+}
+
+footer {
+  background: rgb(46, 41, 41);
+  box-shadow: 1px 2px 14px 7px rgba(0, 0, 0, 1);
+}
+
+.copyright p {
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  color: aliceblue;
+  margin: 50px auto auto 0;
+}
+
+.socialNetwork ul {
+  display: flex;
+  justify-content: center;
+}
+
+.socialNetwork ul li {
+  margin: 50px 30px;
+}
+
+.services ul {
+  display: flex;
+}
+
+.services ul li {
+  text-align: center;
+  margin: 50px;
+}
+
+.services ul li img {
+  margin: 10px;
+}
+
+.services ul li p {
+  font-family: "Roboto Condensed", sans-serif;
+  color: rgb(216, 235, 252);
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact ul {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  border: 2px solid black;
+  background: whitesmoke;
+  border-radius: 0px 0px 60px 60px;
+}
+
+.contact ul li p {
+  margin: 0 15px;
+}
+
+.barreEspace {
+  background: rgb(46, 41, 41);
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 1px 2px 14px 7px rgba(0, 0, 0, 1);
+  height: 20px;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(199, 196, 192);
+}
+
+.articles div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.articles div img {
+  box-shadow: 2px 1px 5px 4px rgba(0, 0, 0, 0.75);
+  margin: 20px;
+}
+
+.panier ul {
+  display: flex;
+  position: relative;
+  bottom: 50px;
+  left: 400px;
+  font-family: "Roboto Condensed", sans-serif;
+  border: 3px solid black;
+}
+
+h2 {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 50px;
+  left: 400px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.lobby ul li a {
+  background: rgb(241, 240, 241);
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+  margin: 10px;
+  align-items: flex-end;
+  border-left: 2px solid gray;
+  border-right: 2px solid gray;
+}
+
+.moncompte {
+  margin: 0 50px 0 0;
+}
+
+.comptePanier div ul li p {
+  display: flex;
+  align-items: center;
+}

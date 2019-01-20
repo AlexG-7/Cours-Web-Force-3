@@ -1,0 +1,21 @@
+
+Programme Réalisation de la BOUTIQUE : 
+
+Commun à tous les fichiers : 
+	- inc/header.inc.php (design du header et de la nav)
+	- inc/footer.inc.php
+	- inc/init.inc.php (Session et connexion BDD)
+	- inc/fonctions.inc.php
+	
+
+-> inscription.php
+-> connexion.php (Deconnexion)
+-> profil.php
+
+-> admin/gestion_produit.php (affichage / suppression)
+-> admin/formulaire_produit.php (ajout / modif)
+
+-> boutique.php
+-> fiche_produit.php
+
+-> panier.php

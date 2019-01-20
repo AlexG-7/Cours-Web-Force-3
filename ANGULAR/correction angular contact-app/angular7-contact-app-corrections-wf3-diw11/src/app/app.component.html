@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0d6caf;">
+    <!-- Navbar content -->
+    <div class="container">
+      <a class="navbar-brand" routerLink="/" href="#">ContactApp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#" routerLink="a-propos">A propos</a>
+          <a class="nav-item nav-link" href="#" routerLink="liens-utiles">Liens utiles</a>
+        </div>
+      </div>
+  </div>
+  </nav>
+  <div class="container">
+  
+  <!-- <app-contact-add-form></app-contact-add-form> -->
+  <div class="row">
+  
+    <div class="col-md-2 favourites text-center pt-5 border-danger">
+        <app-sidebar></app-sidebar>
+    </div>
+  
+    <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+  
+  </div>
+  <!-- fin row -->
+  
+  </div>
+  
+  
+  

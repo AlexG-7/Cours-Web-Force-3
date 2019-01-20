@@ -1,0 +1,43 @@
+<script>
+
+// **** Syntaxe d'une boucle for parcourant un tableau de données.
+
+
+// Déclaration de deux variables.
+var index;
+var tableau = [ 10, 20, 30, 40, 50 ];
+
+
+/*
+ * Boucle affichant tous les éléments d'un tableau.
+ *
+ *
+ * Pour rappel une boucle for a trois parties :
+ *
+ * for(INITIALISATION; COMPARAISON; MISE A JOUR)
+ * {
+ *     // ...
+ * }
+ */
+for(index = 0; index < 5; index++)
+{
+    document.write('<p>' + tableau[index] + '</p>');
+}
+
+
+document.write('<h2>Deuxième variante</h2>');
+
+/*
+ * Le problème de la boucle du dessus c'est qu'elle est STATIQUE :
+ * qu'arrive-t'il si le tableau dispose de plus ou de moins de 5 éléments ?
+ *
+ * Il faut rendre la comparaison de la boucle DYNAMIQUE, en utilisant la
+ * longueur du tableau. Cela se fait via la propriété .length des objets de
+ * la classe Array.
+ */
+for(index = 0; index < tableau.length; index++)
+{
+    document.write('<p>' + tableau[index] + '</p>');
+}
+
+</script>

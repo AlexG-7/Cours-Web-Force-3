@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Exemple de recherche dans le DOM avec document.querySelector()</h1>
+
+    <main>
+        <ul>
+            <li>Premier élément de la liste</li>
+            <li>!! LE TEXTE ICI VA DISPARAITRE ETRE REMPLACE</li>
+        </ul>
+        <p class="important">!! LE TEXTE ICI VA DISPARAITRE !!</p>
+    </main>
+
+    <script>
+        var listItem;
+        var paragraph;
+
+        /*
+         * Recherche dans l'arbre DOM en utilisant un sélecteur CSS.
+         *
+         *
+         * document.querySelector() renvoie un objet DOM manipulable
+         * en JavaScript correspondant à la balise trouvée.
+         *
+         * Si plusieurs balises correspondent au sélecteur CSS, seule la
+         * première balise trouvée dans l'ordre de l'arbre DOM est renvoyée.
+         *
+         * Sinon la méthode renvoie la valeur spéciale null.
+         */
+        listItem  = document.querySelectorAll('li');
+        paragraph = document.querySelector('.important');
+
+        // Modification du contenu à l'intérieur de la balise trouvée.
+        listItem[1].textContent  = 'Deuxième élément de la liste';
+        paragraph.textContent = 'Bonjour tout le monde !!';
+
+
+        /*
+         * TODO:
+         * Initialiser correctement la variable listItem avec un
+         * sélecteur CSS trouvant la deuxième balise <li>.
+         */
+    </script>
+</body>
+</html>

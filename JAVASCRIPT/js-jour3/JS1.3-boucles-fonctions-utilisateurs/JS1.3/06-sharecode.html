@@ -1,0 +1,38 @@
+<script>
+
+// **** Comparaison syntaxique entre le FOR et le WHILE.
+
+
+// Déclaration d'une variable.
+var index;
+
+/*
+ * L'avantage d'une boucle for lorsqu'on utilise une variable de boucle
+ * c'est que le code est plus lisible : tout se trouve sur une seule ligne.
+ */
+for(index = 0; index < 10; index++)
+{
+    document.write('<p>' + index + '</p>');
+}
+
+
+// Initialisation...
+index = 0;
+
+// Comparaison...
+while(index < 10)
+{
+    document.write('<p>' + index + '</p>');
+
+    // Mise à jour...
+    index++;
+}
+
+
+/*
+ * La différence entre le WHILE et le DO ... WHILE est l'emplacement de la comparaison :
+ * respectivement avant ou après, ce qui fait que le code se trouvant dans un DO ... WHILE
+ * est garanti de s'exécuter au moins une fois.
+ */
+
+</script>

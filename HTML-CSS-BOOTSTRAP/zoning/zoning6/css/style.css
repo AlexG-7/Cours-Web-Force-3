@@ -1,0 +1,226 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+/* ***************ZONING 6 FLOAT/FLEX (correction)************/
+.container {
+  width: 1000px;
+  margin: 100px auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+header {
+  display: flex;
+}
+
+.haut1, .haut3 {
+  width: 25%;
+}
+
+.haut1 {
+  background: #BC77F0;
+  height: 150px;
+}
+
+.haut3 {
+  background: #857CFD;
+}
+
+.haut2 {
+  width: 50%;
+  background: #FA74F6;
+}
+
+nav {
+  text-align: center;
+  padding: 20px;
+  background: purple;
+}
+
+aside {
+  width: 20%;
+  height: 500px;
+  background: blue;
+  float: left;
+}
+
+main {
+  width: 80%;
+  float: left;
+}
+
+section {
+  display: flex;
+}
+
+.zone1, .zone2 {
+  width: 50%;
+  height: 200px;
+}
+
+.zone1 {
+  background: #57DC35;
+}
+
+.zone2 {
+  background: orange;
+}
+
+.slideshow {
+  height: 200px;
+  background: yellow;
+}
+
+.zone3 {
+  height: 100px;
+  background: #7B2A65;
+  width: 25%;
+}
+
+.zone4 {
+  height: 100px;
+  background: #01EDFE;
+  width: 25%;
+}
+
+footer {
+  height: 100px;
+  background: #5AB8EF;
+  clear: both;
+}
+
+/***********************ZONING 6 FLEX********************/
+/* .container{ */
+/* width:960px; */
+/* margin:50px auto; */
+/* } */
+/* h2{ */
+/* text-align:center; */
+/* } */
+/* header{ */
+/* display:flex; */
+/* } */
+/* #haut1{ */
+/* width:25%; */
+/* height:200px; */
+/* background:#BC77F0; */
+/* } */
+/* #haut2{ */
+/* width:50%; */
+/* height:200px; */
+/* background:#FA74F6; */
+/* } */
+/* #haut3{ */
+/* width:25%; */
+/* height:200px; */
+/* background:#857CFD; */
+/* } */
+/* nav{ */
+/* width:100%; */
+/* height:50px; */
+/* background:purple; */
+/* } */
+/* main{ */
+/* display:flex; */
+/* } */
+/* aside{ */
+/* width:20%; */
+/* height:1100px; */
+/* background:blue; */
+/* } */
+/* section{ */
+/* width:80%; */
+/* } */
+/* .zone2{ */
+/* width:100%; */
+/* display:flex; */
+/* } */
+/* #A{ */
+/* width:50%; */
+/* height:400px; */
+/* background:#57DC35; */
+/* } */
+/* #B{ */
+/* width:50%; */
+/* height:400px; */
+/* background:orange; */
+/* } */
+/* .slideshow{ */
+/* width:100%; */
+/* height:500px; */
+/* background:yellow; */
+/* } */
+/* .zone4{ */
+/* display:flex; */
+/* height:200px;  */
+/* } */
+/* .zone4 div:nth-child(odd){ */
+/* width:100%; */
+/* background:#7B2A65; */
+/* } */
+/* .zone4 div:nth-child(even){ */
+/* width:100%; */
+/* background:#01EDFE; */
+/* } */
+/* footer{ */
+/* height:100px; */
+/* background:#5AB8EF; */
+/* } */

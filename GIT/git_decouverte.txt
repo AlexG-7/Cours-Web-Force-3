@@ -1,0 +1,17 @@
+==================================================================================
+DECOUVERTE
+==================================================================================
+
+GIT est un outil de Versionning, c'est ce qu'on appel un VCS (Version Control System).
+Il permet d'avoir plusieurs versions des fichiers qui composent une application (site web ou autre), et ainsi travailler en équipe tout en gardant des historiques (versions) des fichiers sur lesquels on travail.
+
+GIT doit être installé et utilisé sur le pc serveur et le pc client. L'échange de données GIT peut se faire de serveur à serveur, de client à serveur, de serveur à client, de client à client.
+Il existe plusieurs concurrents de GIT (SVN etc..), mais GIT est le plus utilisé.
+
+GITHUB est ce qu'on appel un hebergeur de repositories GIT. C'est à dire, qu'il se charge d'heberger les versions de notre application et ainsi on peut y accéder en ligne. C'est un peu comme Dropbox. Il existe plusieurs hebergeurs (gitbucket etc ..), mais github est le plus connu et le plus utilisé.
+
+Nous avons aussi la possibilité de ne pas passer par GITHUB et d'heberger son repository GIT dans un serveur perso. Un VPS ou un serveur dédié sera necessaire pour pouvoir utiliser les lignes de commandes.
+L'échange entre le repository en ligne et le repository local se fait en SSH ou HTTPS.
+
+GITHUB est une interface web qui permet de commander GIT en ligne sans passer par des lignes de commande.
+Sur son serveur perso, nous pouvons installer GITLAB qui fait la même chose que GITHUB.

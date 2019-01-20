@@ -1,0 +1,44 @@
+footer
+{
+    height: 50px;
+    margin-top: 30px;
+    padding-top: 10px;
+
+    text-align: center;
+
+    color: #fff;
+    background: #050505;
+}
+
+.mon-conteneur
+{
+    min-height: 750px;
+}
+
+.ma-nav
+{
+    border-radius: 0;
+}
+
+.border
+{
+    border: 1px solid black;
+}
+
+.bulle
+{
+    font-size: 12px;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+
+    text-align: center;
+
+    color: white;
+    border-radius: 50px;
+    background-color: red;
+    text-shadow: 1px 1px 1px black;
+}

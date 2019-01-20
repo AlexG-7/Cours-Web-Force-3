@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<h1> Compteur de caractères<br>en 10 lignes de JQuery<br><small>(Twitter like)</small></h1>
+	<hr>
+
+	<p>Cet exercice simple fait intervenir 3 notions :</p>
+	<div style="text-align: left; width: 75%; margin: 0 auto">
+	<ul>
+	<li>La sélection d'élément <small>( avec $(selector) )</small></li>
+	<li>le gestionnaire d'évènements <small> ( avec .on() )</small></li>
+	<li>La manipulation du DOM <small>( .text(), .val(), et addClass() / removeClass() )</small></li>
+	</ul>
+	</div>
+	<small>Auteur : Fred Lossignol</small>
+	<hr>
+
+	
+
+	<!-- LE CHAMP DE SAISIE TEXTAREA -->
+	<textarea id="tweetContent" placeholder="Votre Tweet Ici..." style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 86px; width:60%"></textarea>
+
+	<!-- LE PARAGRAPHE QUI AFFICHE LE NOMBRE DE CARACTERES RESTANTS -->
+	<p id="counterBlock"></p>
+
+	<!-- On charge jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+	<!-- Notre code JS-jQuery -->
+	<script>
+		// On selectionne l'element textarea et l'élement p#counterBlock
+		var textarea = $('#tweetContent');
+		var blockCount = $('#counterBlock');
+
+		/*
+		 *  La fonction count calcule la longueur de la chaîne de caractère contenue dans le textarea
+		 *	et affche cette valeur dans la balise p#counterBlock grâce à .text()
+		*/
+		function count() {
+			// Calcul du nb de caractères restants
+		    var count = 140-textarea.val().length;
+		    // Affichage du nb de caractères restants en injectant du text dans la balise <p>
+		    blockCount.text(count);
+		    
+		   // Si le count descend sous 0 on ajoute la class red à la balise p#counterBlock
+		   if(count<0) {
+		   		blockCount.addClass("red");
+		   }
+		   else if(count>=0) {
+		    	blockCount.removeClass("red");
+		   }
+		} // FIN DE LA FONCTION COUNT
+
+
+		/*
+		 *	on pose un écouteur d'évènement keyup sur le textarea.
+		*/
+		textarea.on('keydown', count);
+
+		// On déclenche la fonction count quand l'évènement se produit et au chargement de la page
+		count();
+
+
+	</script>
+
+</body>
+</html>
+
+

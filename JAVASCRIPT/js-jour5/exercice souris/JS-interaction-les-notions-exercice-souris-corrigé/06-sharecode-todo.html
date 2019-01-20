@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <style>
+        .good
+        {
+            color: green;
+        }
+        .important
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemple d'installation de gestionnaire d'évènement</h1>
+
+    <p id="text" class="important">Ceci est un texte important qui va changer en un clic !</p>
+
+    <table>
+        <caption>5 Fruits et Légumes par Jour</caption>
+        <tbody>
+            <tr>
+                <td>Prune</td>
+                <td>Poire</td>
+                <td>Pomme</td>
+                <td>Carotte</td>
+                <td>Haricot</td>
+            </tr>
+            <tr>
+                <td>Violette</td>
+                <td>Jaune</td>
+                <td>Verte</td>
+                <td>Orange</td>
+                <td>Rouge</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button>Cliquez ici</button>
+
+    <script>
+        var button;
+
+
+        /*
+         * Fonction gestionnaire d'évènement de clic sur le bouton.
+         *
+         * Par convention on nomme ce genre de fonction en onXXYY() :
+         * - XX est le nom du type de l'évènement
+         * - YY est l'élément cible réagissant à l'évènement
+         */
+        function onClickButton()
+        {
+            var paragraph;
+
+            /*
+             * Recherche dans l'arbre DOM d'une balise ayant l'id spécifié.
+             *
+             *
+             * document.getElementById() renvoie un objet DOM manipulable
+             * en JavaScript correspondant à la balise trouvée.
+             *
+             * Sinon la méthode renvoie la valeur spéciale null.
+             */
+            paragraph = document.getElementById('text');
+
+            // Modification du contenu du paragraphe.
+            paragraph.textContent = 'Bonjour tout le monde :-)';
+
+
+            /*
+             * TODO:
+             * Le paragraphe doit se colorier en vert et non plus en rouge désormais.
+             * Faire disparaître en CSS la deuxième ligne du tableau contenant les couleurs.
+             */
+        }
+
+
+        /*
+         * Recherche dans l'arbre DOM en utilisant un sélecteur CSS.
+         *
+         *
+         * document.querySelector() renvoie un objet DOM manipulable
+         * en JavaScript correspondant à la balise trouvée.
+         *
+         * Si plusieurs balises correspondent au sélecteur CSS, seule la
+         * première balise trouvée dans l'ordre de l'arbre DOM est renvoyée.
+         *
+         * Sinon la méthode renvoie la valeur spéciale null.
+         */
+        button = document.querySelector('button');
+
+        /*
+         * Installation d'un gestionnaire d'évènement clic.
+         *
+         * Lorsque l'utilisateur cliquera sur le button, la fonction onClickBouton() sera exécutée.
+         */
+        button.addEventListener('click', onClickButton);
+
+
+        /*
+         * TODO:
+         * Voir la liste des types d'évènements du DOM : http://devdocs.io/dom_events/
+         *
+         * Le bouton doit maintenant réagir au double clic, renommer en conséquence
+         * la fonction onClickButton() en onDoubleClickButton().
+         */
+    </script>
+</body>
+</html>

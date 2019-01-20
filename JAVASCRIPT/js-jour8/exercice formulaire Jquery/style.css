@@ -1,0 +1,37 @@
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+form {
+  margin: 0 auto;
+  width: 500px;
+}
+.error {
+  color: rgb(209, 47, 47);
+}
+label {
+  color: rgba(20, 103, 212, 0.74);
+  display: block;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  padding: 3px;
+  border: 1px solid rgb(129, 111, 77);
+}
+button {
+  width: 100%;
+  background: #18a5ea;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #18a5ea;
+  border-radius: 5px;
+}
+.success{
+  display: none;
+}
+.error {
+  color: rgb(209, 47, 47);
+}

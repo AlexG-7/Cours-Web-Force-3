@@ -1,0 +1,22 @@
+<div *ngIf="contact" class="container">
+  <div class="row">
+    <div class="col-12 col-md-10 offset-2">
+      <h2>
+        <span><i class="fas fa-arrow-left mr-3"></i></span>{{ contact.name.first }}{{ contact.name.last }}
+      </h2>
+      <div class="jumbotron">
+        <!-- LES INFOS DU CONTACT -->
+        <img class="img-thumbnail" [src]="contact.picture.large" alt="jeanmichmich" />
+        <p>
+          {{ contact.location.street }} {{ contact.location.postcode }}
+          {{ contact.location.city }}
+        </p>
+        <p></p>
+        <ul>
+          <li>Email: {{ contact.email }}</li>
+          <li>Mobile: {{ contact.cell }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

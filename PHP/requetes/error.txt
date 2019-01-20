@@ -1,0 +1,11 @@
+Erreur SQL : 07/01/2019 - 12:14:32 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:14:36 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:14:36 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:14:36 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:14:37 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:14:37 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:14:37 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:14:37 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:14:37 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:14:37 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 51
+Erreur SQL : 07/01/2019 - 12:25:21 - C:\xampp\htdocs\PHP\requetes\pdo_avance.php - 56

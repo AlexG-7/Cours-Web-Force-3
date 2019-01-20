@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <style>
+        .important
+        {
+            color: red;
+        }
+        .good
+        {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Gestion des évènements</h1>
+<p id="text" class="important">Ceci est un texte important qui va changer en 1 clic</p>
+
+<button>Clickez ici</button>
+
+
+
+
+<script>
+	// ON SELECTIONNE L'ELT SUR LEQUEL ON VEUT ECOUTER UN EVENEMENT
+    var btn = document.querySelector("button");
+    
+    // ON POSE UN ECOUTEUR D'EVENEMENT
+    // click, dblclick, mouseenter, mouseout, mouseover, keyup, keydown
+    /*
+     param1 : nom de l'évenement
+     param2 : la fonction qui sera déclenchée quand l'event sera détecté
+    
+    */
+    function changeColor() {
+    
+		var paragraph = document.getElementById("text");
+        if( paragraph.classList.contains('important') ) {
+            paragraph.classList.remove('important');
+            paragraph.classList.add("good");
+        }
+        else {
+            paragraph.classList.add('important');
+            paragraph.classList.remove("good");
+        }
+        
+        
+	
+    }
+    
+    btn.addEventListener('click', changeColor );
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

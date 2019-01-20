@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Selection et modification du DOM</title>
+    <style>
+    	li.item {
+        	color: #ff0000;
+        }
+        .bkg {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+ <h1>Exemple de recherche dans le DOM avec getElementById()</h1>
+ 
+ <p id="content">Le texte ici va être remplacé</p>
+ 
+ <ul>
+ 	<li>1er élement de la liste</li>
+    <li>Le 2ème élément va ête remplacé</li>
+ </ul>
+ 
+ <ol>
+ 	<li class="item">Meïr</li>
+    <li class="item">Estelle</li>
+    <li class="item">Youssouf</li>
+ </ol>
+ 
+ <blockquote class="important">
+ 	"Ce que je sais c'est que je ne sais rien"
+ </blockquote>
+ 
+ 
+ 
+ <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte</p>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ <script>
+ // getElementById() // return 1 elt par son id
+ // querySelectorAll() // return 1 array d'Elts
+ // querySelector() // retrun le 1er Elt qu'il trouve en parcourant l'arbre DOM
+ 
+ 
+ // getElementById()
+ // ICI JE SELECTIONNE UN ELT HTML PAR SON ID
+ var paragraph = document.getElementById("content");
+ 
+ // JE MODIFIE LE CONTENU TEXTE DE L'ELT SELECTIONNÉ (ici le <p>)
+ paragraph.textContent = "Hello tout le monde"; 
+ 
+ 
+ // querySelectorAll()
+ var items= document.querySelectorAll("li"); // Retourne un array de 2 Elmts Li
+ items[1].textContent = "On va manger !!!!!!!";
+ 
+
+ // querySelector()
+ var quote = document.querySelector("blockquote.important");
+ quote.textContent = "Don't worry be happy!";
+
+ var prenoms = document.getElementsByClassName("item");
+ console.log(prenoms);
+ for(var i=0; i < prenoms.length; i++ ) {
+    prenoms[i].style.color="green";
+    prenoms[i].style.backgroundColor="black";
+ }
+ 
+ var paragraphs = document.getElementsByTagName("p");
+ console.log(paragraphs);
+paragraphs[1].className="bkg";
+ 
+ 
+ </script>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</body>

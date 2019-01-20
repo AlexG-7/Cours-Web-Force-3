@@ -1,0 +1,28 @@
+<script>
+
+// **** Syntaxe d'une boucle for qui compte à l'envers.
+
+
+// Déclaration d'une variable.
+var compteur;
+
+
+/*
+ * Boucle comptant de 20 à 1 inclus.
+ *
+ *
+ * Pour rappel une boucle for a trois parties :
+ *
+ * for(INITIALISATION; COMPARAISON; MISE A JOUR)
+ * {
+ *     // ...
+ * }
+ */
+for(compteur = 20; compteur >= 1; compteur--)
+{
+    document.write('<p>Le compteur vaut <strong>' + compteur + '</strong>.</p>');
+}
+
+// Sans cette boucle il aurait fallu écrire manuellement vingt fois document.write()...
+
+</script>

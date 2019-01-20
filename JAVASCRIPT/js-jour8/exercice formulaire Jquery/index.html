@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>formulaire JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <h1>Formulaire JQuery</h1>
+    <form>
+      <label>Votre prénom</label>
+      <input type="text" placeholder="Votre prénom" name="firstname" />
+      <p class="error"></p>
+
+      <label>Vous êtes ?</label>
+      <input type="text" placeholder="Votre email" name="email" />
+      <p class="error"></p>
+
+      <label>Votre catégorie</label>
+      <select name="category">
+        <option value="0">-- Selectionner votre catégorie</option>
+        <option value="1">Entrepreneur</option>
+        <option value="2">Salarié</option>
+        <option value="3">Etudiant</option>
+      </select>
+      <p class="error"></p>
+
+      <label>Votre message</label>
+      <textarea placeholder="votre message" name="message"></textarea>
+      <p class="error"></p>
+
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <div class="success"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

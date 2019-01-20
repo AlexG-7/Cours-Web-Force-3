@@ -1,0 +1,23 @@
+ul.list-group li img {
+  width: 90px;
+}
+
+.fav {
+  background: rgb(76, 120, 240);
+}
+
+.btn-light {
+  margin: 5px;
+}
+
+.girl {
+  border-color: purple;
+  border-width: 1px;
+  background: pink;
+}
+
+.boy {
+  border-color: blue;
+  background: rgba(83, 171, 243, 0.966);
+  border-width: 1px;
+}

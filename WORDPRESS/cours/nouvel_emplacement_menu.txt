@@ -1,0 +1,16 @@
+---------------
+1ere ETAPE
+---------------
+
+Ouvrir le fichier wp-content/themes/montheme/functions.php et inserer le code suivant en bas de page:
+
+	add_action('init', 'themeperso_add_menu');
+	function themeperso_add_menu(){register_nav_menu('main_menu', 'Menu principal');}
+
+---------------
+2nde ETAPE
+---------------
+Dans le fichier de destinations
+(exemple wp-content/themes/montheme/footer.php)
+
+<?php wp_nav_menu(array('theme_location' => 'main_menu')); ?>

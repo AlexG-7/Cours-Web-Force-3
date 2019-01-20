@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons  slot="start">
+      <ion-button (click)="closeTrailer()">
+          <ion-icon slot="start" name="close"></ion-icon>
+          Fermer
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" padding>
+  <div class="video-container">
+      <!-- <iframe [src]="getSafeUrl()" frameborder="0"></iframe> -->
+      <iframe width="560" height="315" [src]="getSafeUrl()" frameborder="0"></iframe>
+  </div>
+ 
+</ion-content>
