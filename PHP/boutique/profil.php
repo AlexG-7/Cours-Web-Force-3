@@ -2,9 +2,9 @@
 //php/boutique/profil.php
 require_once('inc/init.inc.php');
 
-// Est-ce user est connecté sinon... redirection !! 
-if(!userConnecte()){ // Si c'est false
-	header('location:connexion.php');
+// Est-ce user est connecté sinon... redirection !!
+if (!userConnecte()) { // Si c'est false
+    header('location:connexion.php');
 }
 
 
@@ -41,7 +41,7 @@ require_once('inc/header.inc.php');
 <div class="row">
 	<h2>Historique des commandes</h2>
 	<table class="table table-fluid table-dark">
-		<tr>	
+		<tr>
 			<th>Commande N°</th>
 			<th>Montant</th>
 			<th>Date</th>
