@@ -66,6 +66,19 @@
             "json" // Type de données reçues
           );
         } else {
+          $.post(
+            "../traitement.php",
+            $(this).serialize(),
+            function(response) {
+              $("#method").html(response.method);
+              $("#pour").html(response.action);
+              $("#nom-complet").html(response.nom_complet);
+              $("#statut").html(response.status);
+              $("#message").html(response.message);
+              $("#reponse").show();
+            },
+            "json" // Type de données reçues
+          );
 
         }
       });

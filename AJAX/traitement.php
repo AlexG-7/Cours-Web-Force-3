@@ -33,7 +33,7 @@ if ($action == "saluer") {
 elseif($action == "enregistrer") {
   if ($method == "GET") {
     $data["status"] = "error";
-    $data["message"] = "Je veux petre appelé en GET pour saluer";
+    $data["message"] = "Je veux petre appelé en POST pour enregistrer";
 
   } else {
     file_put_contents("noms.txt", $prenom . " " . $nom . PHP_EOL, FILE_APPEND);
