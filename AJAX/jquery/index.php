@@ -39,6 +39,9 @@
 
         $.ajax({
           url: "../hello.php",
+          // Méthode d'envoi, GET ou POST
+          // Par défaut GET
+          method: "GET",
           // Les données que l'on envoie serialize() crée un jquery string
           // en utilisant l'attribut name des champs du formulaire
           data: $(this).serialize(),
