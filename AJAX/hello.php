@@ -3,12 +3,8 @@
 if (!empty($_GET)) {
     extract($_GET);
 } else {
-    $nom = "DOE";
-    $prenom = "John";
+    $nom = 'Doe';
+    $prenom = 'Jane';
 }
 
-echo "bonjour " . $prenom . " " . $nom;
-
-
-
-?>
+echo "Bonjour $prenom $nom";

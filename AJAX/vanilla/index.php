@@ -5,30 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ajax</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+    </style>
 </head>
 <body>
     <button id="action">
-        1er appel Ajax
+            1er appel AJAX
     </button>
-    <div id="reponse"></div>
+    <div id="reponse" style="color: #eee; background: firebrick;">
+    </div>
+
+
     <script>
-        document.getElementById("action").addEventListener("click",function(){
-            // Instanciation de l'objet
-            var xhttp = new XMLHttpRequest();
-            // On définit ce qui va être fait après l'appel ajax
-            xhttp.onreadystatechange = function(){
-                // xhhtp.readyState === 4 : on a reçu la réponse du serveur
-                // xttp.status === 200 : le serveur a répondu avec le code HTTP 200 OK
-                if (xhttp.readyState === 4 && xhttp.status === 200) {
-                    // dans xhttp.responseText, on a le contenu du fichier que l'on appelle
-                    document.getElementById("reponse").innerHTML = xhttp.responseText;
-                }
-            };
-            // Appel en HTTP GET du fichier hello.php à la racine du dossier ajax
-            xhttp.open("GET","../hello.php");
-            // Envoi de l'appel
-            xhttp.send();
-        });
+        document.getElementById('action').
+            addEventListener('click', function() {
+                // instanciation de l'objet
+                var xhttp = new XMLHttpRequest();
+                
+                // on définit ce qui va être fait après l'appel ajax
+                xhttp.onreadystatechange = function () {
+                    // xhttp.readyState === 4 : on a reçu la réponse du serveur
+                    // xhttp.status === 200   : le serveur a répondu avec le code HTTP 200 OK
+                    if (xhttp.readyState === 4 && xhttp.status === 200) {
+                        document.getElementById('reponse').innerHTML = xhttp.responseText;
+                    }
+                };
+
+                // appel en HTTP GET du fichier hello.php à la racine du dossier ajax
+                xhttp.open('GET', '../hello.php');
+
+                //envoi de l'appel
+                xhttp.send();
+            });
     </script>
 </body>
 </html>

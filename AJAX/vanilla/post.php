@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Paramètres</title>
-
+    <title>Formulaire méthode POST</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+        .container {
+            width: 1050px;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,35 +38,39 @@
 
 
     <script>
-        document.getElementById('qui').addEventListener('submit', function(event){
-            // On annule la soumission du formulaire
-            event.preventDefault();
+        document.getElementById('qui').
+            addEventListener('submit', function(event) {
+                // on annule la soumission du formulaire
+                event.preventDefault();
 
-            var nom = document.getElementById('nom').value;
-            var prenom = document.getElementById('prenom').value;
-            var queryString = 'nom=' + nom + '&prenom=' + prenom;
-            // Instanciation de l'objet
-            var xhttp = new XMLHttpRequest();
+                var nom = document.getElementById('nom').value;
+                var prenom = document.getElementById('prenom').value;
 
-            xhttp.onreadystatechange = function(){
-                // xhhtp.readyState === 4 : on a reçu la réponse du serveur
-                // xttp.status === 200 : le serveur a répondu avec le code HTTP 200 OK
-                if (xhttp.readyState === 4 && xhttp.status === 200) {
-                    // dans xhttp.responseText, on a le contenu du fichier que l'on appelle
-                    document.getElementById("reponse").innerHTML = xhttp.responseText;
-                }
-             };
+                var queryString = 'nom=' + nom + '&prenom=' + prenom;
 
-            // Appel en HTTP GET du fichier hello.php à la racine du dossier ajax
-            xhttp.open("POST","../save.php");
-            // On ajoute une entête HTTP pour signifier qu'on envoie des données en POST
-            xhttp.setRequestHeader(
-              "Content-type",
-              "application/x-www-form-urlencoded" // Type MIME d'une page qui contient du POST
-            );
-            // On passe la queryString au moment de l'envoi
-            xhttp.send(queryString);
-        });
+                // instanciation de l'objet
+                var xhttp = new XMLHttpRequest();
+
+                // on définit ce qui va être fait après l'appel ajax
+                xhttp.onreadystatechange = function () {
+                    if (xhttp.readyState === 4 && xhttp.status === 200) {
+                        document.getElementById('reponse').innerHTML = xhttp.responseText;
+                    }
+                };
+
+                // appel en HTTP POST du fichier hello.php à la racine du dossier ajax
+                xhttp.open('POST', '../save.php');
+
+                // on ajoute une entête HTTP pour signifier qu'on envoir des données en POST
+                xhttp.setRequestHeader(
+                    'Content-type',
+                    'application/x-www-form-urlencoded' // type MIME d'une page qui contient du POST
+                );
+
+                // on passe la query string au moment de l'envoi
+                xhttp.send(queryString);
+                
+            });
     </script>
 </body>
 </html>

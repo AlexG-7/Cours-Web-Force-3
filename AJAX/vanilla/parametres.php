@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Paramètres</title>
-
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+        .container {
+            width: 1050px;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,7 +24,7 @@
                 <input type="text" name="nom" id="nom">
             </div>
             <div>
-                <label for="prenom">Prénom</label><br>
+                <label for="nom">Prénom</label><br>
                 <input type="text" name="prenom" id="prenom">
             </div>
             <div>
@@ -55,7 +63,7 @@
 
                 //envoi de l'appel
                 xhttp.send();
-
+                
             });
     </script>
 </body>
