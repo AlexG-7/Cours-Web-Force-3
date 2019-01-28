@@ -114,5 +114,5 @@ for (var index = 0; index < phrases.length; index = index + 1) {
   }
 }
 
-document.write("<p>La phrase la plus longue est: "+phrases[indexPhraseLaPlusLongue]+"</p>");
-document.write("<p>Elle fait :"+phrases[indexPhraseLaPlusLongue].length+ " caractères.</p>");
+document.write("<p>La phrase la plus longue est: " + phrases[indexPhraseLaPlusLongue] + "</p>")
+document.write("<p>Elle fait :" + phrases[indexPhraseLaPlusLongue].length + " caractères.</p>");

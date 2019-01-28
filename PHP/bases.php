@@ -23,7 +23,7 @@ echo '<h2>Les commentaires</h2>';
 <strong>Bonjour, je suis de l'HTML</strong>
 
 <?php
-ech '<br/><strong>Je suis du PHP !</strong>';
+echo '<br/><strong>Je suis du PHP !</strong>';
 
 echo '<h2>Variables : Déclaration, affectation et type :</h2>';
 // Une variables est une petite boîte dans laquelle on stocke une information... qu'on peut modifier.
