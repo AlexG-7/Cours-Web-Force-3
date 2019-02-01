@@ -1,0 +1,1 @@
+CREATE TABLE `voitures`.`liste_voiture` ( `id_voiture` INT(3) NOT NULL AUTO_INCREMENT , `marque` VARCHAR(50) NOT NULL , `modele` VARCHAR(50) NOT NULL , `annee` YEAR(4) NOT NULL , `couleur` VARCHAR(50) NOT NULL , PRIMARY KEY (`id_voiture`)) ENGINE = InnoDB;
