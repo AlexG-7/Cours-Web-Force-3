@@ -1,10 +1,9 @@
 <?php
-
 if (!empty($_GET)) {
-    extract($_GET);
+	extract($_GET);
 } else {
-    $nom = 'Doe';
-    $prenom = 'Jane';
+	$nom = 'Doe';
+	$prenom = 'John';
 }
 
 echo "Bonjour $prenom $nom";

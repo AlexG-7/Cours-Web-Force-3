@@ -1,65 +1,49 @@
 /*
- *
- * - Ajouter un bouton "voir détail" dans le tableau des commandes
- * - Au clic, faire un appel ajax vers une page qui renvoi le détail de la commande sous forme de tableau HTML
- * - Et le faire apparaître sous le tableau des commandes
- *      + afficher le nom du produit plutôt que l'ID
- *
- */
+- ajouter un bouton 'voir détail' dans le tableau des commandes
+- au clic, faire un appel ajax vers une page qui renvoi
+  le détail de la commande sous forme de tableau HTML
+  et le faire apparaître sous le tableau des commandes
+*/
+$(function () {
+	$('.btn-detail').click(function () {
+		$.get(
+			'../ajax/detail_commande.php',
+			'id=' + $(this).data('id'),
+			function (response) {
+				$('#detail').html(response);
+			}
+		);
+	});
 
+	$('#detail').on('click', '.btn-produit', function(){
+		$.get(
+			'../ajax/detail_produit.php',
+			'id=' + $(this).data('id'),
+			function (response) {
+				var $modal = $('#modal-produit');
+				// l'élément qui a la classe modal-body
+				// à l'intérieur de la modale
+				$('.modal-body', $modal).html(response);
+				$modal.modal('show');
+			}
+		);
+	});
 
-$(function() { // DOM ready (= la page a été chargée)
-  $('.see').click(function(event) {
+	$('.btn-etat').click(function () {
 
-    var id = $(this).data('id');
+		var $this = $(this);
+		$.post(
+			'../ajax/maj_etat.php',
+			'id=' + $(this).data('id'),
+			function (response) {
+				// maj de l'état dans le tableau HTML
+				$this.closest('tr').find('.td-etat').html(response);
 
-    $.get(
-      '../admin/detail_commande.php', // fichier appelé
-      'id=' + id, // données envoyées
-      function(response) { // success
-        $('#detail').html(response);
-      }
-    );
-  });
-
-  $('.maj').click(function(event) {
-
-    var id = $(this).data('id');
-
-    $.get(
-      '../admin/maj.php', // fichier appelé
-      'id=' + id, // données envoyées
-      function(response) { // success
-        if (response.status == 'ok') {
-          alert(response.etat);
-          $('#etat-commande-' + id).html(response.etat);
-          if (response.etat == 'livré') {
-            $(".maj[data-id='" + id + "']").prop("disabled", true);
-          }
-        }
-      },
-      'json'
-    );
-  });
-
-  $('#detail').on('click', '.product', function(event) {
-    var id = $(this).data('id');
-    $.get(
-      '../admin/detail-produit.php', // fichier appelé
-      'id=' + id, // données envoyées
-      function(response) { // success
-        var $modal = $('#myModal');
-        $('#desc-prod', $modal).html(response.desc_prod);
-        $('#cat-prod', $modal).html(response.cat_prod);
-        $('#col-prod', $modal).html(response.col_prod);
-        $('#taille-prod', $modal).html(response.taille_prod);
-        $('#nom-produit', $modal).html(response.nom_produit);
-        $('#prix-prod', $modal).html(response.prix_prod);
-        $('#img-prod', $modal).attr('src', response.photo);
-      },
-      'json'
-    );
-
-    $('#myModal').modal('show');
-  });
+				// suppression du bouton MAJ si l est livré
+				if (response == 'Livré') {
+					$this.remove();
+				}
+			}
+		);
+	});
 });

@@ -1,8 +1,6 @@
 <?php
 require_once('inc/init.inc.php');
 
-//debug($_SESSION);
-
 // traitement pour vider le panier : 
 if(isset($_GET['action']) && $_GET['action'] == 'vider'){ // Si une action est demandée via l'URL et que cette action est 'vider'
 	unset($_SESSION['panier']);
@@ -149,7 +147,7 @@ require_once('inc/header.inc.php');
 
 //debug($_SESSION['panier']);
 echo "<div class='col-md-8 col-md-offset-2'>";
-echo "<div class='text-center'><h2>Panier</h2></div>";
+echo "<div class='alert alert-info text-center'><h2>Panier</h2></div>";
 echo "<table class='table'>";
 echo $error; 
 

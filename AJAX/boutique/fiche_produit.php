@@ -62,7 +62,7 @@ require_once('inc/header.inc.php');
 	<div class="panel-default border">
 		<div class="panel-heading text-center"><h2><?= $titre ?></h2></div>
 		<div class="panel-body">
-			<img src="photo/<?= $photo ?>" alt="" class="img-responsive img-boutique"><hr>
+			<img src="photo/<?= $photo ?>" alt="" class="img-responsive"><hr>
 			<p class="text-center">Catégorie : <?= $categorie ?></p>
 			<p class="text-center">Couleur : <?= $couleur ?></p>
 			<p class="text-center">Taille : <?= $taille ?></p>
@@ -102,7 +102,7 @@ require_once('inc/header.inc.php');
 		
 		<p><a href="fiche_produit.php?id=<?= $id_produit ?>">
 		
-		<img src="photo/<?= $photo ?>" alt="" class="img-responsive img-boutique">
+		<img src="photo/<?= $photo ?>" alt="" class="img-responsive">
 		
 		</a></p>
 		<p class="text-center"><?= number_format($prix, 2, ',', ' ') ?>€</p>

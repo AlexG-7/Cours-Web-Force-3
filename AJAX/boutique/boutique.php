@@ -4,7 +4,6 @@
 require_once('inc/init.inc.php');
 
 
-//debug($_SESSION);
 
 
 // 1 : Recupérer tous les produits 
@@ -85,6 +84,14 @@ require_once('inc/header.inc.php');
 			<p class="pull-right visible-xs">
 			  <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
 			</p>
+			<div class="jumbotron">
+			  <h1>Ma boutique</h1>
+			</div>
+			
+			
+			
+			
+			
 			
 			
 <?php foreach($produits as $pdt) : ?>
@@ -96,7 +103,7 @@ require_once('inc/header.inc.php');
 		
 		<p><a href="fiche_produit.php?id=<?= $id_produit ?>">
 		
-		<img src="photo/<?= $photo ?>" alt="" class="img-responsive img-boutique">
+		<img src="photo/<?= $photo ?>" alt="" class="img-responsive">
 		
 		</a></p>
 		<p class="text-center"><?= number_format($prix, 2, ',', ' ') ?>€</p>

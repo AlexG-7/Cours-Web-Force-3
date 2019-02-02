@@ -27,8 +27,3 @@ define('RACINE_JS', RACINE_SITE . 'js/');
 //-- AUTRES INCLUSIONS
 require_once('fonctions.inc.php');
 
-
-
-
-
-

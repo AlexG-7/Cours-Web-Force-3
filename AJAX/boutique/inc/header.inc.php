@@ -9,13 +9,18 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Isaac's Shop - <?= $page ?></title>
+    <title>Ma Boutique - <?= $page ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= RACINE_SITE ?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= RACINE_SITE ?>css/style.css" rel="stylesheet">
 
-    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
 
@@ -30,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Isaac's Weird Shop</a>
+          <a class="navbar-brand" href="#">Ma Boutique!</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
