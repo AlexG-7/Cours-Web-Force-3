@@ -1,0 +1,26 @@
+﻿# Atom-Settings
+- atom beautify
+- bracket-colorizer
+- emmet
+- file-icons
+- french-menu
+- minimap
+- minimap highlight-selected
+- minimap pigments
+- highlight-selected
+- pdf view
+- php getters-setters
+- pigments
+- ide terminal
+- teletype
+- color-picker
+- docblockr
+- drag-relative-path
+- atom-browser
+- atom-ide-ui
+- ide-typescript
+- ide-php
+- ide css
+- atom-autocomplete-php
+- atom-symfony-2
+- php-twig
